@@ -47,7 +47,14 @@ class FirstFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.button).setOnClickListener {
-            view.findViewById<TextView>(R.id.textview_first).text = getString(R.string.pressed_text)
+            val textview = view.findViewById<TextView>(R.id.textview_first)
+
+            if (!textview.text.equals(getString(R.string.pressed_text))) {
+                textview.text = getString(R.string.pressed_text)
+            }
+            else {
+                textview.text = getString(R.string.hello_first_fragment)
+            }
         }
     }
 

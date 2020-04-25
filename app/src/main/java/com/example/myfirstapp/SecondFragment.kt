@@ -29,7 +29,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_header).text =
-                getString(R.string.random_heading, args.myArg)
+                getString(R.string.random_heading, args.myArg.toString())
 
         val count = args.myArg
         val random = java.util.Random()

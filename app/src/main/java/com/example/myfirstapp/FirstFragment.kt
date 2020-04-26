@@ -48,11 +48,14 @@ class FirstFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button).setOnClickListener {
             val textview = view.findViewById<TextView>(R.id.textview_first)
+            val pressedText: String = getString(R.string.pressed_text)
 
-            if (!textview.text.equals(getString(R.string.pressed_text))) {
-                textview.text = getString(R.string.pressed_text)
+            if(textview.text != pressedText) {
+                textview.textSize = 25.toFloat()
+                textview.text = pressedText
             }
             else {
+                textview.textSize = 75.toFloat()
                 textview.text = getString(R.string.hello_first_fragment)
             }
         }

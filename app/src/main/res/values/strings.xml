@@ -13,6 +13,7 @@
     <string name="toast_button_text">Toast</string>
     <string name="random_button_text">Random</string>
     <string name="count_button_text">Count</string>
+    <string name="genius_button_text">Genius</string>
 
     <!-- Strings used for outputs -->
     <string name="toast_text">Hello Toast!</string>

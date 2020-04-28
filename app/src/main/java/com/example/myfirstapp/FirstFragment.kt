@@ -29,42 +29,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.random_button).setOnClickListener {
-            val countTextView = view.findViewById<TextView>(R.id.textview_first)
-            val currentCount = countTextView.text.toString().toInt()
 
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(currentCount)
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.toast_button).setOnClickListener {
-            val myToast = Toast.makeText(context, getString(R.string.toast_text), Toast.LENGTH_SHORT)
-            myToast.show()
-        }
-
-        view.findViewById<Button>(R.id.count_button).setOnClickListener {
-            countMe(view)
-        }
-
-        view.findViewById<Button>(R.id.button).setOnClickListener {
-            val textview = view.findViewById<TextView>(R.id.textview_first)
-            val pressedText: String = getString(R.string.pressed_text)
-
-            if(textview.text != pressedText) {
-                textview.textSize = 25.toFloat()
-                textview.text = pressedText
-            }
-            else {
-                textview.textSize = 75.toFloat()
-                textview.text = getString(R.string.hello_first_fragment)
-            }
-        }
     }
 
-    fun countMe(view: View) {
-        val countTextView = view.findViewById<TextView>(R.id.textview_first) // find text view
-        val count: Int = countTextView.text.toString().toInt() + 1 // increase count
-
-        countTextView.text = count.toString() // set new text
-    }
 }

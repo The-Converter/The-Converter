@@ -10,10 +10,8 @@
     <string name="random_heading">Random number between 0 and %1$s:</string>
 
     <!--  Strings used for Buttons -->
-    <string name="toast_button_text">Toast</string>
-    <string name="random_button_text">Random</string>
-    <string name="count_button_text">Count</string>
-    <string name="genius_button_text">Genius</string>
+    <string name="temperature_button_text">Temperature</string>
+    <string name="speed_button_text">Speed</string>>
 
     <!-- Strings used for outputs -->
     <string name="toast_text">Hello Toast!</string>

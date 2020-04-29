@@ -6,12 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_first.*
-import org.w3c.dom.Text
-import java.io.File
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -29,7 +24,10 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        view.findViewById<Button>(R.id.button_speed).setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToSpeed()
+            findNavController().navigate(action)
+        }
     }
 
 }

@@ -1,13 +1,22 @@
 <resources>
     <string name="app_name">My First App</string>
     <string name="action_settings">Settings</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="speed_fragment_label">Speed</string>
+
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">0</string>
     <string name="random_heading">Random number between 0 and %1$s:</string>
+
+    <!-- Strings used for TextViews -->
+    <string name="kmh_textView_text">Km/h</string>
+    <string name="ms_textView_text">m/s</string>
+    <string name="mph_textView_text">mph</string>
+    <string name="fts_textView_text">ft/s</string>
+    <string name="kn_textView_text">Knots</string>
 
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>
@@ -16,4 +25,7 @@
     <!-- Strings used for outputs -->
     <string name="toast_text">Hello Toast!</string>
     <string name="pressed_text">Du host den Button druckt du genie</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

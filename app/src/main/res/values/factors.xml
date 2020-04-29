@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- speed -->
+    <string name="ms_kmh">3.6</string>
+    <string name="kmh_mph">0.6213711922373</string>
+    <string name="kmh_fts">0.9113444152814</string>
+    <string name="kmh_kn">0.5399568034557</string>
+
+    <string name="ms_mph">2.236936292054</string>
+    <string name="ms_fts">3.280839895013</string>
+    <string name="ms_kn">1.943844492441 </string>
+
+    <string name="mph_fts">1.466666666667</string>
+    <string name="mph_kn">0.8689762419006</string>
+
+    <string name="fts_kn">0.5924838012959 </string>
+</resources>

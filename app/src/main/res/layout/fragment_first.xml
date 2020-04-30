@@ -14,8 +14,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
-        android:drawableLeft="@drawable/ic_button_temperature"
         android:drawableStart="@drawable/ic_button_temperature"
+        android:drawableLeft="@drawable/ic_button_temperature"
         android:text="@string/temperature_button_text"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +25,17 @@
         android:id="@+id/button_speed"
         android:layout_width="150dp"
         android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:drawableLeft="@drawable/ic_button_speed"
         android:drawableStart="@drawable/ic_button_speed"
+        android:drawableLeft="@drawable/ic_button_speed"
         android:text="@string/speed_button_text"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_temperature"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

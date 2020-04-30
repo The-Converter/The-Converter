@@ -6,15 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.core.widget.doAfterTextChanged
-import kotlinx.android.synthetic.main.fragment_speed.view.*
+import androidx.navigation.fragment.findNavController
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Speed.newInstance] factory method to
+ * Use the [SpeedFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Speed : Fragment() {
+class SpeedFragment : Fragment() {
 
     private var changedByApp: Boolean = false
 
@@ -26,9 +27,13 @@ class Speed : Fragment() {
         return inflater.inflate(R.layout.fragment_speed, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<ImageButton>(R.id.imageButton_choose).setOnClickListener {
+            val action = SpeedFragmentDirections.actionSpeedFragmentToFirstFragment()
+            findNavController().navigate(action)
+        }
 
         view.findViewById<EditText>(R.id.editText_kmh).doAfterTextChanged { content ->
             if (!changedByApp) {

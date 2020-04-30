@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Speed">
+    tools:context=".SpeedFragment">
 
 
     <TextView
         android:id="@+id/textView_kmh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/kmh_textView_text"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_choose" />
 
     <EditText
         android:id="@+id/editText_kmh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:hint="@string/kmh_textView_text"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/kmh_textView_text"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_kmh" />
 
@@ -35,10 +36,11 @@
         android:id="@+id/textView_ms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/ms_textView_text"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_kmh" />
 
@@ -46,12 +48,12 @@
         android:id="@+id/editText_ms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:hint="@string/ms_textView_text"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/ms_textView_text"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_ms" />
 
@@ -59,10 +61,11 @@
         android:id="@+id/textView_mph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/mph_textView_text"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_ms" />
 
@@ -70,12 +73,12 @@
         android:id="@+id/editText_mph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:hint="@string/mph_textView_text"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/mph_textView_text"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_mph" />
 
@@ -83,10 +86,11 @@
         android:id="@+id/textView_fts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/fts_textView_text"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_mph" />
 
@@ -94,13 +98,12 @@
         android:id="@+id/editText_fts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:hint="@string/fts_textView_text"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/fts_textView_text"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_fts" />
 
@@ -108,10 +111,11 @@
         android:id="@+id/textView_kn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/kn_textView_text"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_fts" />
 
@@ -119,13 +123,25 @@
         android:id="@+id/editText_kn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:hint="@string/kn_textView_text"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/kn_textView_text"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_kn" />
+
+    <ImageButton
+        android:id="@+id/imageButton_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_button_choose"
+        android:contentDescription="@string/ic_button_choose_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

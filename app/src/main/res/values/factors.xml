@@ -14,4 +14,11 @@
     <string name="mph_kn">0.8689762419006</string>
 
     <string name="fts_kn">0.5924838012959 </string>
+
+    <!-- temperature -->
+    <string name="celsius_fahrenheit_factor">1.8</string>
+    <string name="celsius_fahrenheit_add">32</string>
+    <string name="celsius_kelvin_add">273.15</string>
+
+    <string name="fahrenheit_kelvin_subtract">459.67</string>
 </resources>

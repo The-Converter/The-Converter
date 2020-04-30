@@ -25,7 +25,12 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.button_speed).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToSpeed()
+            val action = FirstFragmentDirections.actionFirstFragmentToSpeedFragment()
+            findNavController().navigate(action)
+        }
+
+        view.findViewById<Button>(R.id.button_temperature).setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToTemperatureFragment()
             findNavController().navigate(action)
         }
     }

@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.example.theconverter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -7,12 +7,13 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.myfirstapp.FirstFragment"
+        android:name="com.example.theconverter.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
         <action
             android:id="@+id/action_FirstFragment_to_speedFragment"
-            app:destination="@id/speedFragment" />
+            app:destination="@id/speedFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_FirstFragment_to_temperatureFragment"
             app:destination="@id/temperatureFragment" />
@@ -20,7 +21,7 @@
 
     <fragment
         android:id="@+id/speedFragment"
-        android:name="com.example.myfirstapp.SpeedFragment"
+        android:name="com.example.theconverter.SpeedFragment"
         android:label="@string/speed_fragment_label"
         tools:layout="@layout/fragment_speed" >
         <action
@@ -30,7 +31,7 @@
 
     <fragment
         android:id="@+id/temperatureFragment"
-        android:name="com.example.myfirstapp.TemperatureFragment"
+        android:name="com.example.theconverter.TemperatureFragment"
         android:label="@string/temperature_fragment_label"
         tools:layout="@layout/fragment_temperature" >
         <action

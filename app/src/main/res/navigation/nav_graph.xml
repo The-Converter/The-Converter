@@ -16,7 +16,8 @@
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_FirstFragment_to_temperatureFragment"
-            app:destination="@id/temperatureFragment" />
+            app:destination="@id/temperatureFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment

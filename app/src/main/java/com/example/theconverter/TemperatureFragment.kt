@@ -70,6 +70,7 @@ class TemperatureFragment : Fragment() {
         }
     }
 
+
     private fun inputCelsius(view: View, celsius: Double) {
 
         changedByApp = true

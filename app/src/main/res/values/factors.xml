@@ -21,4 +21,16 @@
     <string name="celsius_kelvin_add">273.15</string>
 
     <string name="fahrenheit_kelvin_subtract">459.67</string>
+
+    <!-- area -->
+    <integer name="factor_area">100</integer>
+
+    <integer name="one_step">1</integer>
+    <integer name="two_steps">2</integer>
+    <integer name="three_steps">3</integer>
+    <integer name="four_steps">4</integer>
+    <integer name="five_steps">5</integer>
+    <integer name="six_steps">6</integer>
+
+
 </resources>

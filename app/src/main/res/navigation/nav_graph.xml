@@ -16,8 +16,15 @@
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_FirstFragment_to_temperatureFragment"
+<<<<<<< Updated upstream
             app:destination="@id/temperatureFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
+=======
+            app:destination="@id/temperatureFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_areaFragment"
+            app:destination="@id/areaFragment" />
+>>>>>>> Stashed changes
     </fragment>
 
     <fragment
@@ -37,6 +44,15 @@
         tools:layout="@layout/fragment_temperature" >
         <action
             android:id="@+id/action_temperatureFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/areaFragment"
+        android:name="com.example.theconverter.AreaFragment"
+        android:label="fragment_area"
+        tools:layout="@layout/fragment_area" >
+        <action
+            android:id="@+id/action_areaFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

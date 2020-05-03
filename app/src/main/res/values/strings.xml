@@ -18,6 +18,23 @@
     <string name="fahrenheit_textView_text">Fahrenheit</string>
     <string name="kelvin_textView_text">Kelvin</string>
 
+    <string name="km_area_textView_text">square kilometre</string>
+    <string name="hectares_area_textView_text">hectares</string>
+    <string name="ar_area_textView_text">ar</string>
+    <string name="m_area_textView_text">square meters</string>
+    <string name="dm_area_textView_text">square decimeter</string>
+    <string name="cm_area_textView_text">square centimeters</string>
+    <string name="mm_area_textView_text">square millimeters</string>
+
+    <!-- Strings used for EditText -->
+    <string name="km_area_editText">km²</string>
+    <string name="hectares_area_editText">ha</string>
+    <string name="ar_area_editText">a</string>
+    <string name="m_area_editText">m²</string>
+    <string name="dm_area_editText">dm²</string>
+    <string name="cm_area_editText">cm²</string>
+    <string name="mm_area_editText">mm²</string>
+
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>
     <string name="speed_button_text">Speed</string>>
@@ -26,4 +43,6 @@
 
     <!-- Strings used for content description -->
     <string name="ic_button_choose_description">Choose</string>
+
+
 </resources>

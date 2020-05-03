@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.core.widget.doAfterTextChanged
@@ -128,19 +127,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_hectares_area).setText((km * (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((km * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_ar_area).setText((km * (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((km * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_m_area).setText((km * (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_m_area).setText((km * factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_dm_area).setText((km * (factor.pow(R.integer.four_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((km * factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_cm_area).setText((km * (factor.pow(R.integer.five_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((km * factor.pow(resources.getInteger(R.integer.five_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_mm_area).setText((km * (factor.pow(R.integer.six_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((km * factor.pow(resources.getInteger(R.integer.six_steps))).toString())
 
         changedByApp = false
     }
@@ -149,19 +148,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_km_area).setText((hectares / (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_km_area).setText((hectares / factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_ar_area).setText((hectares * (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((hectares * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_m_area).setText((hectares * (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_m_area).setText((hectares * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_dm_area).setText((hectares * (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((hectares * factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_cm_area).setText((hectares * (factor.pow(R.integer.four_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((hectares * factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_mm_area).setText((hectares * (factor.pow((R.integer.five_steps)))).toString())
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((hectares * factor.pow(resources.getInteger(R.integer.five_steps))).toString())
 
         changedByApp = false
 
@@ -171,19 +170,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_km_area).setText((ar / (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_km_area).setText((ar / factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_hectares_area).setText((ar / (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((ar / factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_m_area).setText((ar * (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_m_area).setText((ar * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_dm_area).setText((ar * (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((ar * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_cm_area).setText((ar * (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((ar * factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_mm_area).setText((ar * (factor.pow(R.integer.four_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((ar * factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
         changedByApp = false
 
@@ -193,19 +192,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_km_area).setText((m / (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_km_area).setText((m / factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_hectares_area).setText((m / (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((m / factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_ar_area).setText((m / (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((m / factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_dm_area).setText((m * (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((m * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_cm_area).setText((m * (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((m * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_mm_area).setText((m * (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((m * factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
         changedByApp = false
 
@@ -215,19 +214,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_km_area).setText((dm / (factor.pow(R.integer.four_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_km_area).setText((dm / factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_hectares_area).setText((dm / (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((dm / factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_ar_area).setText((dm / (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((dm / factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_m_area).setText((dm / (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_m_area).setText((dm / factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_cm_area).setText((dm * (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((dm * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_mm_area).setText((dm * (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((dm * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
         changedByApp = false
 
@@ -237,19 +236,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_km_area).setText((cm / (factor.pow(R.integer.five_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_km_area).setText((cm / factor.pow(resources.getInteger(R.integer.five_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_hectares_area).setText((cm / (factor.pow(R.integer.four_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((cm / factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_ar_area).setText((cm / (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((cm / factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_m_area).setText((cm / (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_m_area).setText((cm / factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_dm_area).setText((cm / (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((cm / factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
-        view.findViewById<EditText>(R.id.editText_mm_area).setText((cm * (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((cm * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
         changedByApp = false
 
@@ -259,19 +258,19 @@ class AreaFragment : Fragment() {
 
         changedByApp = true
 
-        val factor:Double = (R.integer.factor_area).toDouble()
+        val factor:Double = resources.getInteger(R.integer.factor_area).toDouble()
 
-        view.findViewById<EditText>(R.id.editText_km_area).setText((mm / (factor.pow(R.integer.six_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_km_area).setText((mm / factor.pow(resources.getInteger(R.integer.six_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_hectares_area).setText((mm / (factor.pow(R.integer.five_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((mm / factor.pow(resources.getInteger(R.integer.five_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_ar_area).setText((mm / (factor.pow(R.integer.four_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((mm / factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_m_area).setText((mm / (factor.pow(R.integer.three_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_m_area).setText((mm / factor.pow(resources.getInteger(R.integer.three_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_dm_area).setText((mm / (factor.pow(R.integer.two_steps))).toString())
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((mm / factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
-        view.findViewById<EditText>(R.id.editText_cm_area).setText((mm / (factor.pow(R.integer.one_step))).toString())
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((mm / factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
         changedByApp = false
 

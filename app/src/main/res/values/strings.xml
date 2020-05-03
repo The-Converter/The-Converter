@@ -37,7 +37,8 @@
 
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>
-    <string name="speed_button_text">Speed</string>>
+    <string name="speed_button_text">Speed</string>
+    <string name="area_button_text">Area</string>
 
     <!-- Strings used for outputs -->
 

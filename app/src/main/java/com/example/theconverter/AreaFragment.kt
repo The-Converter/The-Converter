@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.core.widget.doAfterTextChanged
+import androidx.navigation.fragment.findNavController
 import kotlin.math.pow
 
 
@@ -32,7 +34,10 @@ class AreaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        view.findViewById<ImageButton>(R.id.imageButton_choose).setOnClickListener {
+            val action = AreaFragmentDirections.actionAreaFragmentToFirstFragment()
+            findNavController().navigate(action)
+        }
 
         view.findViewById<EditText>(R.id.editText_km_area).doAfterTextChanged { content ->
             if (!changedByApp)
@@ -201,8 +206,6 @@ class AreaFragment : Fragment() {
         view.findViewById<EditText>(R.id.editText_cm_area).setText((m * (factor.pow(R.integer.two_steps))).toString())
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((m * (factor.pow(R.integer.three_steps))).toString())
-
-
 
         changedByApp = false
 

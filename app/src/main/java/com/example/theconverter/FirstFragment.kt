@@ -33,6 +33,11 @@ class FirstFragment : Fragment() {
             val action = FirstFragmentDirections.actionFirstFragmentToTemperatureFragment()
             findNavController().navigate(action)
         }
+
+        view.findViewById<Button>(R.id.button_area).setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToAreaFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

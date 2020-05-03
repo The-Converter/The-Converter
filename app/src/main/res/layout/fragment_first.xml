@@ -38,4 +38,18 @@
         app:layout_constraintStart_toEndOf="@+id/button_temperature"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_area"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/ic_button_area"
+        android:drawableLeft="@drawable/ic_button_area"
+        android:text="@string/area_button_text"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_temperature" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

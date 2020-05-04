@@ -31,7 +31,8 @@
         tools:layout="@layout/fragment_speed" >
         <action
             android:id="@+id/action_SpeedFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
 
     <fragment
@@ -41,7 +42,8 @@
         tools:layout="@layout/fragment_temperature" >
         <action
             android:id="@+id/action_temperatureFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
 
     <fragment
@@ -51,6 +53,7 @@
         tools:layout="@layout/fragment_area" >
         <action
             android:id="@+id/action_areaFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
 </navigation>

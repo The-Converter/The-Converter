@@ -39,66 +39,75 @@ class AreaFragment : Fragment() {
         }
 
         view.findViewById<EditText>(R.id.editText_km_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputKm(view, content.toString().toDouble())
-                }
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_hectares_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputHectares(view, content.toString().toDouble())
-                }
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_ar_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputAr(view, content.toString().toDouble())
-                }
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_m_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputM(view, content.toString().toDouble())
-                }
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_dm_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputDm(view, content.toString().toDouble())
-                }
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_cm_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputCm(view, content.toString().toDouble())
-                }
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_mm_area).doAfterTextChanged { content ->
-            if (!changedByApp)
-                if (content.isNullOrEmpty()) {
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
-                } else {
+                else
                     inputMm(view, content.toString().toDouble())
-                }
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_mile_area).doAfterTextChanged { content ->
+            if (!changedByApp) {
+                if (content.isNullOrEmpty())
+                    clearEditText(view)
+                else
+                    inputMi(view, content.toString().toDouble())
+            }
         }
     }
 
@@ -274,5 +283,25 @@ class AreaFragment : Fragment() {
 
         changedByApp = false
 
+    }
+
+    private fun inputMi(view: View, mi: Double) {
+        changedByApp = true
+
+        view.findViewById<EditText>(R.id.editText_km_area).setText((mi / getString(R.string.sq_km_mi).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_hectares_area).setText((mi / getString(R.string.sq_ha_mi).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_ar_area).setText((mi / getString(R.string.sq_ar_mi).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_m_area).setText((mi / getString(R.string.sq_m_mi).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_dm_area).setText((mi / getString(R.string.sq_dm_mi).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cm_area).setText((mi / getString(R.string.sq_cm_mi).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_mm_area).setText((mi / getString(R.string.sq_mm_mi).toDouble()).toString())
+
+        changedByApp = false
     }
 }

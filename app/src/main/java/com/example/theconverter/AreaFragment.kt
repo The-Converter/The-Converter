@@ -129,6 +129,8 @@ class AreaFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_mm_area).getText().clear()
 
+        view.findViewById<EditText>(R.id.editText_mile_area).getText().clear()
+
         changedByApp = false
     }
 
@@ -150,6 +152,8 @@ class AreaFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((km * factor.pow(resources.getInteger(R.integer.six_steps))).toString())
 
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((km * getString(R.string.sq_km_mi).toDouble()).toString())
+
         changedByApp = false
     }
 
@@ -170,6 +174,8 @@ class AreaFragment : Fragment() {
         view.findViewById<EditText>(R.id.editText_cm_area).setText((hectares * factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((hectares * factor.pow(resources.getInteger(R.integer.five_steps))).toString())
+
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((hectares * getString(R.string.sq_ha_mi).toDouble()).toString())
 
         changedByApp = false
 
@@ -193,6 +199,8 @@ class AreaFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((ar * factor.pow(resources.getInteger(R.integer.four_steps))).toString())
 
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((ar * getString(R.string.sq_ar_mi).toDouble()).toString())
+
         changedByApp = false
 
     }
@@ -214,6 +222,8 @@ class AreaFragment : Fragment() {
         view.findViewById<EditText>(R.id.editText_cm_area).setText((m * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((m * factor.pow(resources.getInteger(R.integer.three_steps))).toString())
+
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((m * getString(R.string.sq_m_mi).toDouble()).toString())
 
         changedByApp = false
 
@@ -237,6 +247,8 @@ class AreaFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((dm * factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((dm * getString(R.string.sq_dm_mi).toDouble()).toString())
+
         changedByApp = false
 
     }
@@ -259,6 +271,8 @@ class AreaFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_mm_area).setText((cm * factor.pow(resources.getInteger(R.integer.one_step))).toString())
 
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((cm * getString(R.string.sq_cm_mi).toDouble()).toString())
+
         changedByApp = false
 
     }
@@ -280,6 +294,8 @@ class AreaFragment : Fragment() {
         view.findViewById<EditText>(R.id.editText_dm_area).setText((mm / factor.pow(resources.getInteger(R.integer.two_steps))).toString())
 
         view.findViewById<EditText>(R.id.editText_cm_area).setText((mm / factor.pow(resources.getInteger(R.integer.one_step))).toString())
+
+        view.findViewById<EditText>(R.id.editText_mile_area).setText((mm * getString(R.string.sq_mm_mi).toDouble()).toString())
 
         changedByApp = false
 

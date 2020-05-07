@@ -24,7 +24,8 @@
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_FirstFragment_to_distanceFragment"
-            app:destination="@id/distanceFragment" />
+            app:destination="@id/distanceFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment
@@ -59,6 +60,7 @@
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
+
     <fragment
         android:id="@+id/distanceFragment"
         android:name="com.example.theconverter.DistanceFragment"
@@ -66,6 +68,7 @@
         tools:layout="@layout/fragment_distance" >
         <action
             android:id="@+id/action_distanceFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
 </navigation>

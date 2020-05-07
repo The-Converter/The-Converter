@@ -28,15 +28,15 @@
     <string name="miles_area_textView_text">Square miles</string>
     
     <string name="km_distance_textView_text">Kilometre</string>
-    <string name="m_distance_textView_text">Miters</string>
+    <string name="m_distance_textView_text">Meters</string>
     <string name="dm_distance_textView_text">Decimeters</string>
     <string name="cm_distance_textView_text">Centimeters</string>
     <string name="mm_distance_textView_text">Millimeters</string>
     <string name="miles_distance_textView_text">Miles</string>
     <string name="yard_distance_textView_text">Yard</string>
     <string name="foot_distance_textView_text">Foot</string>
-    <string name="seaMile_distance_textView_text">Sea mile</string>
-    <string name="inch_distance_textView_text">Inch</string>
+    <string name="seaMile_distance_textView_text">Sea miles</string>
+    <string name="inch_distance_textView_text">Inches</string>
 
 
     <!-- Strings used for EditText -->
@@ -64,6 +64,7 @@
     <string name="temperature_button_text">Temperature</string>
     <string name="speed_button_text">Speed</string>
     <string name="area_button_text">Area</string>
+    <string name="distance_button_text">Distance</string>
 
     <!-- Strings used for outputs -->
 

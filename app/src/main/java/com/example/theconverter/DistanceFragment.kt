@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.core.widget.doAfterTextChanged
+import androidx.navigation.fragment.findNavController
 
 
 /**
@@ -29,94 +31,99 @@ class DistanceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        view.findViewById<ImageButton>(R.id.imageButton_choose).setOnClickListener {
+            val action = DistanceFragmentDirections.actionDistanceFragmentToFirstFragment()
+            findNavController().navigate(action)
+        }
+
         view.findViewById<EditText>(R.id.editText_km_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputKm(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_m_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputM(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_dm_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputDm(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_cm_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputCm(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_mm_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputMm(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_miles_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputMiles(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_yard_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputYard(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_foot_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputFoot(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_seaMile_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputSeaMile(view, content.toString().toDouble())
-
+            }
         }
 
         view.findViewById<EditText>(R.id.editText_inch_distance).doAfterTextChanged { content ->
-            if(!changedByApp)
-                if(content.isNullOrEmpty())
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
                     clearEditText(view)
                 else
                     inputInch(view, content.toString().toDouble())
-
+            }
         }
     }
 

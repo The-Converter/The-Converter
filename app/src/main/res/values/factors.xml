@@ -39,4 +39,63 @@
     <string name="sq_dm_mi">3.861021585424e-9</string>
     <string name="sq_cm_mi">3.861021585424e-11</string>
     <string name="sq_mm_mi">3.861021585424e-13</string>
+
+    <!-- distance -->
+    <string name="dis_km_m">1000</string>
+    <string name="dis_km_dm">10000</string>
+    <string name="dis_km_cm">100000</string>
+    <string name="dis_km_mm">1000000</string>
+    <string name="dis_km_miles">0.621371</string>
+    <string name="dis_km_yard">1093.61</string>
+    <string name="dis_km_foot">3280.84</string>
+    <string name="dis_km_seaMile">0.539957</string>
+    <string name="dis_km_inch">39370.1</string>
+
+    <string name="dis_m_dm">10</string>
+    <string name="dis_m_cm">100</string>
+    <string name="dis_m_mm">1000</string>
+    <string name="dis_m_miles">0.000621371</string>
+    <string name="dis_m_yard">1.09361</string>
+    <string name="dis_m_foot">3.28084</string>
+    <string name="dis_m_seaMile">0.000539957</string>
+    <string name="dis_m_inch">19.3701</string>
+
+    <string name="dis_dm_cm">10</string>
+    <string name="dis_dm_mm">100</string>
+    <string name="dis_dm_miles">0.0000621371</string>
+    <string name="dis_dm_yard">0.109361</string>
+    <string name="dis_dm_foot">0.328084</string>
+    <string name="dis_dm_seaMile">0.0000539957</string>
+    <string name="dis_dm_inch">1.93701</string>
+
+    <string name="dis_cm_mm">10</string>
+    <string name="dis_cm_miles">0.00000621371</string>
+    <string name="dis_cm_yard">0.0109361</string>
+    <string name="dis_cm_foot">0.0328084</string>
+    <string name="dis_cm_seaMile">0.00000539957</string>
+    <string name="dis_cm_inch">0.193701</string>
+
+    <string name="dis_mm_miles">0.000000621371</string>
+    <string name="dis_mm_yard">0.00109361</string>
+    <string name="dis_mm_foot">0.00328084</string>
+    <string name="dis_mm_seaMile">0.000000539957</string>
+    <string name="dis_mm_inch">0.0193701</string>
+
+    <string name="dis_miles_yard">1760</string>
+    <string name="dis_miles_foot">5280</string>
+    <string name="dis_miles_seaMile">0.868976</string>
+    <string name="dis_miles_inch">63360</string>
+
+    <string name="dis_yard_foot">3</string>
+    <string name="dis_yard_seaMile">0.000493737</string>
+    <string name="dis_yard_inch">36</string>
+
+    <string name="dis_foot_seaMile">0.000164579</string>
+    <string name="dis_foot_inch">12</string>
+
+    <string name="dis_seaMile_inch">0.0000137133</string>
+
+
+
+
 </resources>

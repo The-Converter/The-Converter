@@ -43,6 +43,11 @@ class FirstFragment : Fragment() {
             val action = FirstFragmentDirections.actionFirstFragmentToDistanceFragment()
             findNavController().navigate(action)
         }
+
+        view.findViewById<Button>(R.id.button_time).setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToTimeFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

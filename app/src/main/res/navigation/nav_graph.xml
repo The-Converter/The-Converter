@@ -26,6 +26,10 @@
             android:id="@+id/action_FirstFragment_to_distanceFragment"
             app:destination="@id/distanceFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_FirstFragment_to_timeFragment"
+            app:destination="@id/timeFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment
@@ -68,6 +72,16 @@
         tools:layout="@layout/fragment_distance" >
         <action
             android:id="@+id/action_distanceFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeFragment"
+        android:name="com.example.theconverter.TimeFragment"
+        android:label="fragment_time"
+        tools:layout="@layout/fragment_time" >
+        <action
+            android:id="@+id/action_timeFragment_to_FirstFragment"
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>

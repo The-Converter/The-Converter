@@ -95,7 +95,10 @@
 
     <string name="dis_seaMile_inch">0.0000137133</string>
 
+    <!-- time -->
+    <string name="time_hours_minutes">60</string>
 
+    <string name="time_minutes_hours">0.0166666667</string>
 
 
 </resources>

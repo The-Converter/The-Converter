@@ -26,7 +26,7 @@
     <string name="cm_area_textView_text">Square centimeters</string>
     <string name="mm_area_textView_text">Square millimeters</string>
     <string name="miles_area_textView_text">Square miles</string>
-    
+
     <string name="km_distance_textView_text">Kilometre</string>
     <string name="m_distance_textView_text">Meters</string>
     <string name="dm_distance_textView_text">Decimeters</string>

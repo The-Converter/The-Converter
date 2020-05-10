@@ -62,7 +62,7 @@ class TimeFragment : Fragment() {
     private fun inputHour(view: View, hours: Double){
         changedByApp = true
 
-        var hoursToMinutesFactor = getString(R.string.time_hours_minutes).toDouble()
+        val hoursToMinutesFactor = getString(R.string.time_hours_minutes).toDouble()
 
         view.findViewById<EditText>(R.id.editText_minutes).setText((hours * hoursToMinutesFactor).toString())
 
@@ -72,7 +72,7 @@ class TimeFragment : Fragment() {
     private fun inputMinutes(view: View, minutes: Double){
         changedByApp = true
 
-        var minutesToHoursFactor = getString(R.string.time_minutes_hours).toDouble()
+        val minutesToHoursFactor = getString(R.string.time_minutes_hours).toDouble()
 
         view.findViewById<EditText>(R.id.editText_hours).setText((minutes * minutesToHoursFactor).toString())
 

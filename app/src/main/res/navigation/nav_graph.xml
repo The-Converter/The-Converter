@@ -75,6 +75,7 @@
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
+
     <fragment
         android:id="@+id/timeFragment"
         android:name="com.example.theconverter.TimeFragment"

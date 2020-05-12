@@ -38,9 +38,11 @@
     <string name="seaMile_distance_textView_text">Sea miles</string>
     <string name="inch_distance_textView_text">Inches</string>
 
+    <string name="day_time_textView_text">Days</string>
     <string name="hour_time_textView_text">Hours</string>
     <string name="minute_time_textView_text">Minutes</string>
     <string name="second_time_textView_text">Seconds</string>
+    <string name="millisecond_time_textView_text">Milliseconds</string>
 
 
     <!-- Strings used for EditText -->
@@ -64,8 +66,11 @@
     <string name="seaMile_distance_editText">sm</string>
     <string name="inch_distance_editText">in</string>
 
+    <string name="day_time_editText">d</string>
     <string name="hour_time_editText">h</string>
     <string name="minute_time_editText">m</string>
+    <string name="second_time_editText">s</string>
+    <string name="millisecond_time_editText">ms</string>
 
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>

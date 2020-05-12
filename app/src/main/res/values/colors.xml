@@ -9,4 +9,6 @@
     <color name="buttonBackground">#70BBDEFB</color>
 
     <color name="screenBackground2">#26C6DA</color>
+    <color name="textView">#737373</color>
+
 </resources>

@@ -11,9 +11,9 @@
         android:id="@+id/imageButton_choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/ic_button_choose_description"
         android:src="@drawable/ic_button_choose"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +27,10 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:text="@string/hour_time_textView_text"
+        android:textColor="@color/textView"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton_choose" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_days" />
 
     <EditText
         android:id="@+id/editText_hours"
@@ -39,22 +40,48 @@
         android:layout_marginLeft="32dp"
         android:autofillHints="none"
         android:ems="10"
-        android:inputType="number|numberDecimal"
         android:hint="@string/hour_time_editText"
+        android:inputType="number|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeInHours_textView_text" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/timeInSeconds_textView_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
+        android:text="@string/second_time_textView_text"
+        android:textColor="@color/textView"
         android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_minutes" />
+
+    <TextView
+        android:id="@+id/timeInMinutes_textView_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="28dp"
         android:text="@string/minute_time_textView_text"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_hours" />
+
+    <EditText
+        android:id="@+id/editText_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/second_time_editText"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeInSeconds_textView_text" />
 
     <EditText
         android:id="@+id/editText_minutes"
@@ -64,30 +91,59 @@
         android:layout_marginLeft="32dp"
         android:autofillHints="none"
         android:ems="10"
-        android:inputType="number|numberDecimal"
         android:hint="@string/minute_time_editText"
+        android:inputType="number|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/timeInMinutes_textView_text" />
 
     <TextView
-        android:id="@+id/timeInSeconds_textView_text"
+        android:id="@+id/timeInDays_textView_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/day_time_textView_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_choose" />
+
+    <EditText
+        android:id="@+id/editText_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:autofillHints="none"
+        android:ems="10"
+        android:hint="@string/day_time_editText"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeInDays_textView_text" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:textSize="24sp"
-        android:text="@string/minute_time_textView_text"
+        android:text="@string/millisecond_time_textView_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_hours" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_seconds" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText_milliseconds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:autofillHints="none"
         android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="323dp" />
+        android:inputType="number|numberDecimal"
+        android:hint="@string/millisecond_time_editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

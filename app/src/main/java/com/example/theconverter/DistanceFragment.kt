@@ -401,7 +401,7 @@ class DistanceFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_foot_distance).setText((inch / getString(R.string.dis_foot_inch).toDouble()).toString())
 
-        view.findViewById<EditText>(R.id.editText_km_distance).setText((inch / getString(R.string.dis_seaMile_inch).toDouble()).toString())
+        view.findViewById<EditText>(R.id.editText_seaMile_distance).setText((inch / getString(R.string.dis_seaMile_inch).toDouble()).toString())
 
         changedByApp = false
     }

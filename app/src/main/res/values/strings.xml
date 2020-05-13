@@ -44,6 +44,14 @@
     <string name="second_time_textView_text">Seconds</string>
     <string name="millisecond_time_textView_text">Milliseconds</string>
 
+    <string name="joule_energy_textView_text">Joule</string>
+    <string name="kilojoule_energy_textView_text">Kilojoule</string>
+    <string name="calorie_energy_textView_text">Calorie</string>
+    <string name="kilocalorie_energy_textView_text">Kilocalorie</string>
+    <string name="watt_hour_energy_textView_text">Watt-hour</string>
+    <string name="kilowatt_hour_energy_textView_text">Kilowatt-hour</string>
+    <string name="british_thermal_unit_energy_textView_text">British thermal unit</string>
+    <string name="foot_pound_energy_textView_text">Foot-pound</string>
 
     <!-- Strings used for EditText -->
     <string name="km_area_editText">km²</string>
@@ -72,12 +80,22 @@
     <string name="second_time_editText">s</string>
     <string name="millisecond_time_editText">ms</string>
 
+    <string name="joule_energy_editText">J</string>
+    <string name="kilojoule_energy_editText">kJ</string>
+    <string name="calorie_energy_editText">cal</string>
+    <string name="kilocalorie_energy_editText">kcal</string>
+    <string name="watt_hour_energy_editText">W h</string>
+    <string name="kilowatt_hour_energy_editText">kW h</string>
+    <string name="british_thermal_unit_energy_editText">Btu</string>
+    <string name="foot_pound_energy_editText"> ft⋅lb</string>
+
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>
     <string name="speed_button_text">Speed</string>
     <string name="area_button_text">Area</string>
     <string name="distance_button_text">Distance</string>
     <string name="time_button_text">Time</string>
+    <string name="energy_button_text">Energy</string>
 
     <!-- Strings used for outputs -->
 

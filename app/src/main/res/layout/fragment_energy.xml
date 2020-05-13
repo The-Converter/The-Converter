@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EnergyFragment">
+
+    <ImageButton
+        android:id="@+id/imageButton_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_button_choose"
+        android:contentDescription="@string/ic_button_choose_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_choose">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_joule_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/joule_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton_choose" />
+
+            <EditText
+                android:id="@+id/editText_joule_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/joule_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_joule_energy" />
+
+            <TextView
+                android:id="@+id/textView_kilojoule_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/kilojoule_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_joule_energy" />
+
+            <EditText
+                android:id="@+id/editText_kilojoule_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/joule_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_kilojoule_energy" />
+
+            <TextView
+                android:id="@+id/textView_calorie_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/calorie_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_kilojoule_energy" />
+
+            <EditText
+                android:id="@+id/editText_calorie_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/calorie_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_calorie_energy" />
+
+            <TextView
+                android:id="@+id/textView_kilocalorie_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/kilocalorie_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_calorie_energy" />
+
+            <EditText
+                android:id="@+id/editText_kilocalorie_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/kilocalorie_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_kilocalorie_energy" />
+
+            <TextView
+                android:id="@+id/textView_watt_hour_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/watt_hour_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_kilocalorie_energy" />
+
+            <EditText
+                android:id="@+id/editText_watt_hour_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/watt_hour_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_watt_hour_energy" />
+
+            <TextView
+                android:id="@+id/textView_kilowatt_hour_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/kilowatt_hour_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_watt_hour_energy" />
+
+            <EditText
+                android:id="@+id/editText_kilowatt_hour_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/kilowatt_hour_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_kilowatt_hour_energy" />
+
+            <TextView
+                android:id="@+id/textView_british_thermal_unit_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/british_thermal_unit_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_kilowatt_hour_energy" />
+
+            <EditText
+                android:id="@+id/editText_british_thermal_unit_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/british_thermal_unit_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_british_thermal_unit_energy" />
+
+            <TextView
+                android:id="@+id/textView_foot_pound_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/foot_pound_energy_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_british_thermal_unit_energy" />
+
+            <EditText
+                android:id="@+id/editText_foot_pound_energy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/foot_pound_energy_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_british_thermal_unit_energy" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

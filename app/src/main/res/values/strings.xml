@@ -4,8 +4,14 @@
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
-    <string name="speed_fragment_label">Speed</string>
-    <string name="temperature_fragment_label">Temperature</string>
+    <string name="speed_fragment_label">Speed Fragment</string>
+    <string name="temperature_fragment_label">Temperature Fragment</string>
+    <string name="area_fragment_label">Area Fragment</string>
+    <string name="distance_fragment_label">Distance Fragment</string>
+    <string name="energy_fragment_label">Energy Fragment</string>
+    <string name="time_fragment_label">Time Fragment</string>
+    <string name="time_zone_fragment_label">Time-Zone Fragment</string>
+
 
     <!-- Strings used for TextViews -->
     <string name="kmh_textView_text">Km/h</string>
@@ -80,6 +86,15 @@
     <string name="second_time_editText">s</string>
     <string name="millisecond_time_editText">ms</string>
 
+    <string name="utc_min12_time_zones_textView_text">UTC-12</string>
+    <string name="utc_min11_time_zones_textView_text">UTC-11</string>
+    <string name="utc_min10_time_zones_textView_text">UTC-10</string>
+    <string name="utc_min9_30_time_zones_textView_text">UTC-9:30</string>
+    <string name="utc_min9_time_zones_textView_text">UTC-9</string>
+    <string name="utc_min8_time_zones_textView_text">UTC-8</string>
+    <string name="utc_min7_time_zones_textView_text">UTC-7</string>
+    <string name="utc_min6_time_zones_textView_text">UTC-6</string>
+
     <string name="joule_energy_editText">J</string>
     <string name="kilojoule_energy_editText">kJ</string>
     <string name="calorie_energy_editText">cal</string>
@@ -95,14 +110,15 @@
     <string name="area_button_text">Area</string>
     <string name="distance_button_text">Distance</string>
     <string name="time_button_text">Time</string>
+    <string name="time_zones_button_text">Time-Zones</string>
     <string name="energy_button_text">Energy</string>
 
+    <string name="done_button_text">Done</string>
+
     <!-- Strings used for outputs -->
+    <string name="clock_24_hours_format">%1$s:%2$s</string>
 
     <!-- Strings used for content description -->
     <string name="ic_button_choose_description">Choose</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

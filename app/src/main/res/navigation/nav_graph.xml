@@ -31,6 +31,10 @@
             app:destination="@id/timeFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
+            android:id="@+id/action_FirstFragment_to_timeZoneFragment"
+            app:destination="@id/timeZoneFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
             android:id="@+id/action_FirstFragment_to_energyFragment"
             app:destination="@id/energyFragment" />
     </fragment>
@@ -60,7 +64,7 @@
     <fragment
         android:id="@+id/areaFragment"
         android:name="com.example.theconverter.AreaFragment"
-        android:label="fragment_area"
+        android:label="@string/area_fragment_label"
         tools:layout="@layout/fragment_area" >
         <action
             android:id="@+id/action_areaFragment_to_FirstFragment"
@@ -71,7 +75,7 @@
     <fragment
         android:id="@+id/distanceFragment"
         android:name="com.example.theconverter.DistanceFragment"
-        android:label="fragment_distance"
+        android:label="@string/distance_fragment_label"
         tools:layout="@layout/fragment_distance" >
         <action
             android:id="@+id/action_distanceFragment_to_FirstFragment"
@@ -82,17 +86,29 @@
     <fragment
         android:id="@+id/timeFragment"
         android:name="com.example.theconverter.TimeFragment"
-        android:label="fragment_time"
+        android:label="@string/time_fragment_label"
         tools:layout="@layout/fragment_time" >
         <action
             android:id="@+id/action_timeFragment_to_FirstFragment"
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
+
+    <fragment
+        android:id="@+id/timeZoneFragment"
+        android:name="com.example.theconverter.TimeZoneFragment"
+        android:label="@string/time_zone_fragment_label"
+        tools:layout="@layout/fragment_time_zone" >
+        <action
+            android:id="@+id/action_timeZoneFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+
     <fragment
         android:id="@+id/energyFragment"
         android:name="com.example.theconverter.EnergyFragment"
-        android:label="fragment_energy"
+        android:label="@string/energy_fragment_label"
         tools:layout="@layout/fragment_energy" >
         <action
             android:id="@+id/action_energyFragment_to_FirstFragment"

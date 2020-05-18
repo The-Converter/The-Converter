@@ -38,6 +38,10 @@
             android:id="@+id/action_FirstFragment_to_energyFragment"
             app:destination="@id/energyFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
+            app:destination="@id/energyFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_volumeFragment"
+            app:destination="@id/volumeFragment" />
     </fragment>
 
     <fragment
@@ -113,6 +117,16 @@
         tools:layout="@layout/fragment_energy" >
         <action
             android:id="@+id/action_energyFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/volumeFragment"
+        android:name="com.example.theconverter.VolumeFragment"
+        android:label="fragment_volume"
+        tools:layout="@layout/fragment_volume" >
+        <action
+            android:id="@+id/action_volumeFragment_to_FirstFragment"
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim"/>
     </fragment>

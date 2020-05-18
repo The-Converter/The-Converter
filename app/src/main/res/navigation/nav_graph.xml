@@ -36,7 +36,8 @@
             app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_FirstFragment_to_energyFragment"
-            app:destination="@id/energyFragment" />
+            app:destination="@id/energyFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment

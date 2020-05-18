@@ -68,7 +68,6 @@ class TimeZoneFragment : Fragment() {
         if (!timePicker.isVisible) {
             timePicker.visibility = TimePicker.VISIBLE
             timePicker.bringToFront()
-            timePicker.setBackgroundColor(resources.getColor(R.color.titleScreenBackground, null))
 
             button.visibility = Button.VISIBLE
             button.bringToFront()

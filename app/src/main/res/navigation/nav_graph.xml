@@ -41,7 +41,8 @@
             app:destination="@id/energyFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_volumeFragment"
-            app:destination="@id/volumeFragment" />
+            app:destination="@id/volumeFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment

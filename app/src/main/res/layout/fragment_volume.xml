@@ -180,6 +180,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_inch_volume" />
 
             <TextView
+                android:id="@+id/textView_cubic_yard_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/cubic_yard_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_cubic_inch_volume" />
+
+            <EditText
+                android:id="@+id/editText_cubic_yard_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/cubic_yard_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_cubic_yard_volume" />
+
+            <TextView
                 android:id="@+id/textView_us_dry_gallon_volume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -189,7 +214,7 @@
                 android:text="@string/us_dry_gallon_volume_textView_text"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText_cubic_inch_volume" />
+                app:layout_constraintTop_toBottomOf="@+id/editText_cubic_yard_volume" />
 
             <EditText
                 android:id="@+id/editText_us_dry_gallon_volume"
@@ -229,6 +254,105 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_liquid_gallon_volume" />
 
+            <TextView
+                android:id="@+id/textView_us_dry_quart_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/us_dry_quart_volume_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_us_liquid_gallon_volume" />
+
+            <EditText
+                android:id="@+id/editText_us_dry_quart_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/us_dry_quart_volume_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_us_dry_quart_volume" />
+
+            <TextView
+                android:id="@+id/textView_us_liquid_quart_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/us_liquid_quart_volume_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_us_dry_quart_volume" />
+
+            <EditText
+                android:id="@+id/editText_us_liquid_quart_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/us_liquid_quart_volume_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_us_liquid_quart_volume" />
+
+            <TextView
+                android:id="@+id/textView_us_dry_pint_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/us_dry_pint_volume_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_us_liquid_quart_volume" />
+
+            <EditText
+                android:id="@+id/editText_us_dry_pint_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/us_dry_pint_volume_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_us_dry_pint_volume" />
+
+            <TextView
+                android:id="@+id/textView_us_liquid_pint_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/us_liquid_pint_volume_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_us_dry_pint_volume" />
+
+            <EditText
+                android:id="@+id/editText_us_liquid_pint_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/us_liquid_pint_volume_editText"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_us_liquid_pint_volume" />
 
         </LinearLayout>
     </ScrollView>

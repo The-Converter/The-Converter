@@ -90,6 +90,15 @@ class VolumeFragment : Fragment() {
             }
         }
 
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).doAfterTextChanged { content ->
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
+                    clearEditText(view)
+                else
+                    inputCubicYard(view, content.toString().toDouble())
+            }
+        }
+
         view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).doAfterTextChanged { content ->
             if(!changedByApp) {
                 if (content.isNullOrEmpty())
@@ -108,6 +117,43 @@ class VolumeFragment : Fragment() {
             }
         }
 
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).doAfterTextChanged { content ->
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
+                    clearEditText(view)
+                else
+                    inputUsDryQuart(view, content.toString().toDouble())
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).doAfterTextChanged { content ->
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
+                    clearEditText(view)
+                else
+                    inputUsLiquidQuart(view, content.toString().toDouble())
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).doAfterTextChanged { content ->
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
+                    clearEditText(view)
+                else
+                    inputUsDryPint(view, content.toString().toDouble())
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).doAfterTextChanged { content ->
+            if(!changedByApp) {
+                if (content.isNullOrEmpty())
+                    clearEditText(view)
+                else
+                    inputUsLiquidPint(view, content.toString().toDouble())
+            }
+        }
+
+
     }
     private fun clearEditText(view: View) {
 
@@ -125,9 +171,19 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_cubic_inch_volume).getText().clear()
 
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).getText().clear()
+
         view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).getText().clear()
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).getText().clear()
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).getText().clear()
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).getText().clear()
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).getText().clear()
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).getText().clear()
 
         changedByApp = false
     }
@@ -150,6 +206,16 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((cubicMeter * getString(R.string.volume_meter_us_liquid_gallon).toDouble()).toString())
 
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((cubicMeter * getString(R.string.volume_meter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((cubicMeter * getString(R.string.volume_meter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((cubicMeter * getString(R.string.volume_meter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((cubicMeter * getString(R.string.volume_meter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((cubicMeter * getString(R.string.volume_meter_yard).toDouble()).toString())
+
         changedByApp = false
     }
 
@@ -170,6 +236,16 @@ class VolumeFragment : Fragment() {
         view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((liter * getString(R.string.volume_liter_us_dry_gallon).toDouble()).toString())
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((liter * getString(R.string.volume_liter_us_liquid_gallon).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((liter * getString(R.string.volume_liter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((liter * getString(R.string.volume_liter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((liter * getString(R.string.volume_liter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((liter * getString(R.string.volume_liter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((liter * getString(R.string.volume_liter_yard).toDouble()).toString())
 
         changedByApp = false
     }
@@ -192,6 +268,16 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((cubicCentiMeter * getString(R.string.volume_centimeter_us_liquid_gallon).toDouble()).toString())
 
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((cubicCentiMeter * getString(R.string.volume_centimeter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((cubicCentiMeter * getString(R.string.volume_centimeter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((cubicCentiMeter * getString(R.string.volume_centimeter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((cubicCentiMeter * getString(R.string.volume_centimeter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((cubicCentiMeter * getString(R.string.volume_centimeter_yard).toDouble()).toString())
+
         changedByApp = false
     }
 
@@ -212,6 +298,16 @@ class VolumeFragment : Fragment() {
         view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((milliliter * getString(R.string.volume_milliliter_us_dry_gallon).toDouble()).toString())
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((milliliter * getString(R.string.volume_milliliter_us_liquid_gallon).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((milliliter * getString(R.string.volume_milliliter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((milliliter * getString(R.string.volume_milliliter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((milliliter * getString(R.string.volume_milliliter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((milliliter * getString(R.string.volume_milliliter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((milliliter * getString(R.string.volume_milliliter_yard).toDouble()).toString())
 
         changedByApp = false
     }
@@ -234,6 +330,16 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((cubicFoot * getString(R.string.volume_foot_us_liquid_gallon).toDouble()).toString())
 
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((cubicFoot * getString(R.string.volume_foot_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((cubicFoot * getString(R.string.volume_foot_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((cubicFoot * getString(R.string.volume_foot_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((cubicFoot * getString(R.string.volume_foot_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((cubicFoot * getString(R.string.volume_foot_yard).toDouble()).toString())
+
         changedByApp = false
     }
 
@@ -255,6 +361,48 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((cubicInch * getString(R.string.volume_inch_us_liquid_gallon).toDouble()).toString())
 
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((cubicInch * getString(R.string.volume_inch_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((cubicInch * getString(R.string.volume_inch_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((cubicInch * getString(R.string.volume_inch_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((cubicInch * getString(R.string.volume_inch_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((cubicInch * getString(R.string.volume_inch_yard).toDouble()).toString())
+
+        changedByApp = false
+    }
+
+
+    private fun inputCubicYard(view: View, cubicYard: Double){
+
+        changedByApp = true
+
+        view.findViewById<EditText>(R.id.editText_cubic_meter_volume).setText((cubicYard / getString(R.string.volume_meter_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_liter_volume).setText((cubicYard / getString(R.string.volume_liter_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_centimeter_volume).setText((cubicYard / getString(R.string.volume_centimeter_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_milliliter_volume).setText((cubicYard / getString(R.string.volume_milliliter_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_foot_volume).setText((cubicYard / getString(R.string.volume_foot_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_inch_volume).setText((cubicYard / getString(R.string.volume_inch_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((cubicYard / getString(R.string.volume_us_dry_gallon_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((cubicYard / getString(R.string.volume_us_liquid_gallon_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((cubicYard / getString(R.string.volume_us_dry_quart_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((cubicYard / getString(R.string.volume_us_liquid_quart_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((cubicYard / getString(R.string.volume_us_dry_pint_yard).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((cubicYard / getString(R.string.volume_us_liquid_pint_yard).toDouble()).toString())
+
         changedByApp = false
     }
 
@@ -274,7 +422,17 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_cubic_inch_volume).setText((usDryGallon / getString(R.string.volume_inch_us_dry_gallon).toDouble()).toString())
 
-        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((usDryGallon / getString(R.string.volume_us_dry_gallon_us_liquid_gallon).toDouble()).toString())
+        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((usDryGallon * getString(R.string.volume_us_dry_gallon_us_liquid_gallon).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((usDryGallon * getString(R.string.volume_us_dry_gallon_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((usDryGallon * getString(R.string.volume_us_dry_gallon_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((usDryGallon * getString(R.string.volume_us_dry_gallon_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((usDryGallon * getString(R.string.volume_us_dry_gallon_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((usDryGallon * getString(R.string.volume_us_dry_gallon_yard).toDouble()).toString())
 
         changedByApp = false
     }
@@ -297,8 +455,144 @@ class VolumeFragment : Fragment() {
 
         view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((usLiquidGallon / getString(R.string.volume_us_dry_gallon_us_liquid_gallon).toDouble()).toString())
 
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((usLiquidGallon * getString(R.string.volume_us_liquid_gallon_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((usLiquidGallon * getString(R.string.volume_us_liquid_gallon_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((usLiquidGallon * getString(R.string.volume_us_liquid_gallon_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((usLiquidGallon * getString(R.string.volume_us_liquid_gallon_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((usLiquidGallon * getString(R.string.volume_us_dry_gallon_yard).toDouble()).toString())
+
         changedByApp = false
     }
+
+    private fun inputUsDryQuart(view: View, usDryQuart:Double){
+
+        changedByApp = true
+
+        view.findViewById<EditText>(R.id.editText_cubic_meter_volume).setText((usDryQuart / getString(R.string.volume_meter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_liter_volume).setText((usDryQuart / getString(R.string.volume_liter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_centimeter_volume).setText((usDryQuart / getString(R.string.volume_centimeter_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_milliliter_volume).setText((usDryQuart / getString(R.string.volume_milliliter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_foot_volume).setText((usDryQuart / getString(R.string.volume_foot_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_inch_volume).setText((usDryQuart / getString(R.string.volume_inch_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((usDryQuart / getString(R.string.volume_us_dry_gallon_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((usDryQuart / getString(R.string.volume_us_liquid_gallon_us_dry_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((usDryQuart * getString(R.string.volume_us_dry_quart_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((usDryQuart * getString(R.string.volume_us_dry_quart_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((usDryQuart * getString(R.string.volume_us_dry_quart_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((usDryQuart * getString(R.string.volume_us_dry_quart_yard).toDouble()).toString())
+
+        changedByApp = false
+    }
+
+    private fun inputUsLiquidQuart(view: View, usLiquidQuart:Double){
+
+        changedByApp = true
+
+        view.findViewById<EditText>(R.id.editText_cubic_meter_volume).setText((usLiquidQuart / getString(R.string.volume_meter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_liter_volume).setText((usLiquidQuart / getString(R.string.volume_liter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_centimeter_volume).setText((usLiquidQuart / getString(R.string.volume_centimeter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_milliliter_volume).setText((usLiquidQuart / getString(R.string.volume_milliliter_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_foot_volume).setText((usLiquidQuart / getString(R.string.volume_foot_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_inch_volume).setText((usLiquidQuart / getString(R.string.volume_inch_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((usLiquidQuart / getString(R.string.volume_us_dry_gallon_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((usLiquidQuart / getString(R.string.volume_us_liquid_gallon_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((usLiquidQuart / getString(R.string.volume_us_dry_quart_us_liquid_quart).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((usLiquidQuart * getString(R.string.volume_us_liquid_gallon_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((usLiquidQuart * getString(R.string.volume_us_liquid_gallon_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((usLiquidQuart * getString(R.string.volume_us_liquid_quart_yard).toDouble()).toString())
+
+        changedByApp = false
+    }
+
+    private fun inputUsDryPint(view: View, usDryPint: Double){
+
+        changedByApp = true
+
+        view.findViewById<EditText>(R.id.editText_cubic_meter_volume).setText((usDryPint / getString(R.string.volume_meter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_liter_volume).setText((usDryPint / getString(R.string.volume_liter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_centimeter_volume).setText((usDryPint / getString(R.string.volume_centimeter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_milliliter_volume).setText((usDryPint / getString(R.string.volume_milliliter_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_foot_volume).setText((usDryPint / getString(R.string.volume_foot_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_inch_volume).setText((usDryPint / getString(R.string.volume_inch_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((usDryPint / getString(R.string.volume_us_dry_gallon_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((usDryPint / getString(R.string.volume_us_liquid_gallon_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((usDryPint / getString(R.string.volume_us_dry_quart_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((usDryPint / getString(R.string.volume_us_liquid_quart_us_dry_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_pint_volume).setText((usDryPint * getString(R.string.volume_us_dry_pint_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((usDryPint * getString(R.string.volume_us_dry_pint_yard).toDouble()).toString())
+
+        changedByApp = false
+    }
+
+    private fun inputUsLiquidPint(view: View, usLiquidPint: Double){
+
+        changedByApp = true
+
+        view.findViewById<EditText>(R.id.editText_cubic_meter_volume).setText((usLiquidPint / getString(R.string.volume_meter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_liter_volume).setText((usLiquidPint / getString(R.string.volume_liter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_centimeter_volume).setText((usLiquidPint / getString(R.string.volume_centimeter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_milliliter_volume).setText((usLiquidPint / getString(R.string.volume_milliliter_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_foot_volume).setText((usLiquidPint / getString(R.string.volume_foot_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_inch_volume).setText((usLiquidPint / getString(R.string.volume_inch_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_gallon_volume).setText((usLiquidPint / getString(R.string.volume_us_dry_gallon_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_gallon_volume).setText((usLiquidPint / getString(R.string.volume_us_liquid_gallon_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_quart_volume).setText((usLiquidPint / getString(R.string.volume_us_dry_quart_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_liquid_quart_volume).setText((usLiquidPint / getString(R.string.volume_us_liquid_quart_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_us_dry_pint_volume).setText((usLiquidPint / getString(R.string.volume_us_dry_pint_us_liquid_pint).toDouble()).toString())
+
+        view.findViewById<EditText>(R.id.editText_cubic_yard_volume).setText((usLiquidPint * getString(R.string.volume_us_liquid_pint_yard).toDouble()).toString())
+
+        changedByApp = false
+    }
+
+
 
 
 

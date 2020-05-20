@@ -65,9 +65,14 @@
     <string name="milliliter_volume_textView_text">Milliliter / Cubic millimeter</string>
     <string name="cubic_foot_volume_textView_text">Cubic foot</string>
     <string name="cubic_inch_volume_textView_text">Cubic inch</string>
+    <string name="cubic_yard_textView_text">Cubic Yard</string>
     <string name="us_dry_gallon_volume_textView_text">US dry gallon</string>
     <string name="us_liquid_gallon_volume_textView_text">US liquid gallon</string>
-    <string name="cubic_yard_textView_text">Cubic Yard</string>
+    <string name="us_dry_quart_volume_textView_text">Us dry quart</string>
+    <string name="us_liquid_quart_volume_textView_text">Us liquid quart</string>
+    <string name="us_dry_pint_volume_textView_text">Us dry pint</string>
+    <string name="us_liquid_pint_volume_textView_text">Us liquid pint</string>
+
 
     <!-- Strings used for EditText -->
     <string name="km_area_editText">km²</string>
@@ -120,9 +125,15 @@
     <string name="milliliter_volume_editText">ml / mm³</string>
     <string name="cubic_foot_volume_editText">ctf</string>
     <string name="cubic_inch_volume_editText">cuin</string>
+    <string name="cubic_yard_editText">yd³</string>
     <string name="us_dry_gallon_volume_editText">qt</string>
     <string name="us_liquid_gallon_volume_editText">qt</string>
-    <string name="cubic_yard_editText">yd³</string>
+    <string name="us_dry_quart_volume_editText">Imp. qt</string>
+    <string name="us_liquid_quart_volume_editText">Imp. qt</string>
+    <string name="us_dry_pint_volume_editText">pt</string>
+    <string name="us_liquid_pint_volume_editText">pt</string>
+    
+
 
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>

@@ -109,6 +109,35 @@
     <string name="utc_min8_time_zones_textView_text">UTC-8</string>
     <string name="utc_min7_time_zones_textView_text">UTC-7</string>
     <string name="utc_min6_time_zones_textView_text">UTC-6</string>
+    <string name="utc_min5_time_zones_textView_text">UTC-5</string>
+    <string name="utc_min4_time_zones_textView_text">UTC-4</string>
+    <string name="utc_min3_time_zones_textView_text">UTC-3</string>
+    <string name="utc_min2_30_time_zones_textView_text">UTC-2:30</string>
+    <string name="utc_min2_time_zones_textView_text">UTC-2</string>
+    <string name="utc_min1_time_zones_textView_text">UTC-1</string>
+    <string name="utc_pl0_time_zones_textView_text">UTC+0</string>
+    <string name="utc_pl1_time_zones_textView_text">UTC+1</string>
+    <string name="utc_pl2_time_zones_textView_text">UTC+2</string>
+    <string name="utc_pl3_time_zones_textView_text">UTC+3</string>
+    <string name="utc_pl4_time_zones_textView_text">UTC+4</string>
+    <string name="utc_pl4_30_time_zones_textView_text">UTC+4:30</string>
+    <string name="utc_pl5_time_zones_textView_text">UTC+5</string>
+    <string name="utc_pl5_30_time_zones_textView_text">UTC+5:30</string>
+    <string name="utc_pl5_45_time_zones_textView_text">UTC+5:45</string>
+    <string name="utc_pl6_time_zones_textView_text">UTC+6</string>
+    <string name="utc_pl6_30_time_zones_textView_text">UTC+6:30</string>
+    <string name="utc_pl7_time_zones_textView_text">UTC+7</string>
+    <string name="utc_pl8_time_zones_textView_text">UTC+8</string>
+    <string name="utc_pl8_45_time_zones_textView_text">UTC+8:45</string>
+    <string name="utc_pl9_time_zones_textView_text">UTC+9</string>
+    <string name="utc_pl9_30_time_zones_textView_text">UTC+9:30</string>
+    <string name="utc_pl10_time_zones_textView_text">UTC+10</string>
+    <string name="utc_pl10_30_time_zones_textView_text">UTC+10:30</string>
+    <string name="utc_pl11_time_zones_textView_text">UTC+11</string>
+    <string name="utc_pl12_time_zones_textView_text">UTC+12</string>
+    <string name="utc_pl12_45_time_zones_textView_text">UTC+12:45</string>
+    <string name="utc_pl13_time_zones_textView_text">UTC+13</string>
+    <string name="utc_pl14_time_zones_textView_text">UTC+14</string>
 
     <string name="joule_energy_editText">J</string>
     <string name="kilojoule_energy_editText">kJ</string>
@@ -148,7 +177,8 @@
     <string name="done_button_text">Done</string>
 
     <!-- Strings used for outputs -->
-    <string name="clock_24_hours_format">%1$s:%2$s</string>
+    <string name="clock_24_hours_without_days_format">%1$s:%2$s</string>
+    <string name="clock_24_hours_with_days_format">%1$s day(s) %2$s:%3$s</string>
 
     <!-- Strings used for content description -->
     <string name="ic_button_choose_description">Choose</string>

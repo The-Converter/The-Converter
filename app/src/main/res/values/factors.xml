@@ -13,7 +13,7 @@
     <string name="mph_fts">1.466666666667</string>
     <string name="mph_kn">0.8689762419006</string>
 
-    <string name="fts_kn">0.5924838012959 </string>
+    <string name="fts_kn">0.5924838012959</string>
 
     <!-- temperature -->
     <string name="celsius_fahrenheit_factor">1.8</string>
@@ -252,15 +252,90 @@
     
     
 
+    <!-- Time-Zones -->
 
+    <string name="time_zones_utc_min12">-12</string>
+    <string name="time_zones_utc_min11">-11</string>
+    <string name="time_zones_utc_min10">-10</string>
+    <string name="time_zones_utc_min9_30">-9:30</string>
+    <string name="time_zones_utc_min9">-9</string>
+    <string name="time_zones_utc_min8">-8</string>
+    <string name="time_zones_utc_min7">-7</string>
+    <string name="time_zones_utc_min6">-6</string>
+    <string name="time_zones_utc_min5">-5</string>
+    <string name="time_zones_utc_min4">-4</string>
+    <string name="time_zones_utc_min3">-3</string>
+    <string name="time_zones_utc_min2_30">-2:30</string>
+    <string name="time_zones_utc_min2">-2</string>
+    <string name="time_zones_utc_min1">-1</string>
 
+    <string name="time_zones_utc_pl0">0</string>
 
+    <string name="time_zones_utc_pl1">1</string>
+    <string name="time_zones_utc_pl2">2</string>
+    <string name="time_zones_utc_pl3">3</string>
+    <string name="time_zones_utc_pl4">4</string>
+    <string name="time_zones_utc_pl4_30">4:30</string>
+    <string name="time_zones_utc_pl5">5</string>
+    <string name="time_zones_utc_pl5_30">5:30</string>
+    <string name="time_zones_utc_pl5_45">5:45</string>
+    <string name="time_zones_utc_pl6">6</string>
+    <string name="time_zones_utc_pl6_30">6:30</string>
+    <string name="time_zones_utc_pl7">7</string>
+    <string name="time_zones_utc_pl8">8</string>
+    <string name="time_zones_utc_pl8_45">8:45</string>
+    <string name="time_zones_utc_pl9">9</string>
+    <string name="time_zones_utc_pl9_30">9:30</string>
+    <string name="time_zones_utc_pl10">10</string>
+    <string name="time_zones_utc_pl10_30">10:30</string>
+    <string name="time_zones_utc_pl11">11</string>
+    <string name="time_zones_utc_pl12">12</string>
+    <string name="time_zones_utc_pl12_45">12:45</string>
+    <string name="time_zones_utc_pl13">13</string>
+    <string name="time_zones_utc_pl14">14</string>
 
+    <string-array
+        name="time_zones_factors" >
 
+        <item>@string/time_zones_utc_min12</item>
+        <item>@string/time_zones_utc_min11</item>
+        <item>@string/time_zones_utc_min10</item>
+        <item>@string/time_zones_utc_min9_30</item>
+        <item>@string/time_zones_utc_min9</item>
+        <item>@string/time_zones_utc_min8</item>
+        <item>@string/time_zones_utc_min7</item>
+        <item>@string/time_zones_utc_min6</item>
+        <item>@string/time_zones_utc_min5</item>
+        <item>@string/time_zones_utc_min4</item>
+        <item>@string/time_zones_utc_min3</item>
+        <item>@string/time_zones_utc_min2_30</item>
+        <item>@string/time_zones_utc_min2</item>
+        <item>@string/time_zones_utc_min1</item>
 
+        <item>@string/time_zones_utc_pl0</item>
 
-
-
-
-
+        <item>@string/time_zones_utc_pl0</item>
+        <item>@string/time_zones_utc_pl1</item>
+        <item>@string/time_zones_utc_pl2</item>
+        <item>@string/time_zones_utc_pl3</item>
+        <item>@string/time_zones_utc_pl4</item>
+        <item>@string/time_zones_utc_pl4_30</item>
+        <item>@string/time_zones_utc_pl5</item>
+        <item>@string/time_zones_utc_pl5_30</item>
+        <item>@string/time_zones_utc_pl5_45</item>
+        <item>@string/time_zones_utc_pl6</item>
+        <item>@string/time_zones_utc_pl6_30</item>
+        <item>@string/time_zones_utc_pl7</item>
+        <item>@string/time_zones_utc_pl8</item>
+        <item>@string/time_zones_utc_pl8_45</item>
+        <item>@string/time_zones_utc_pl9</item>
+        <item>@string/time_zones_utc_pl9_30</item>
+        <item>@string/time_zones_utc_pl10</item>
+        <item>@string/time_zones_utc_pl10_30</item>
+        <item>@string/time_zones_utc_pl11</item>
+        <item>@string/time_zones_utc_pl12</item>
+        <item>@string/time_zones_utc_pl12_45</item>
+        <item>@string/time_zones_utc_pl13</item>
+        <item>@string/time_zones_utc_pl14</item>
+    </string-array>
 </resources>

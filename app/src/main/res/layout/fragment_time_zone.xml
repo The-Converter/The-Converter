@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timeZoneFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screenBackground"
@@ -76,6 +77,7 @@
                 android:ems="10"
                 android:hint="@string/utc_min12_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -99,6 +101,7 @@
                 android:ems="10"
                 android:hint="@string/utc_min11_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -122,10 +125,11 @@
                 android:ems="10"
                 android:hint="@string/utc_min10_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/textView_utc_min9.30_time_zones"
+                android:id="@+id/textView_utc_min9_30_time_zones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -136,7 +140,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editText_utc_min9.30_time_zones"
+                android:id="@+id/editText_utc_min9_30_time_zones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -145,6 +149,7 @@
                 android:ems="10"
                 android:hint="@string/utc_min9_30_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -168,6 +173,7 @@
                 android:ems="10"
                 android:hint="@string/utc_min9_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -191,6 +197,7 @@
                 android:ems="10"
                 android:hint="@string/utc_min8_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -214,6 +221,7 @@
                 android:ems="10"
                 android:hint="@string/utc_min7_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -237,6 +245,703 @@
                 android:ems="10"
                 android:hint="@string/utc_min6_time_zones_textView_text"
                 android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_min5_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_min5_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_min5_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_min5_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_min4_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_min4_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_min4_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_min4_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_min3_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_min3_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_min3_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_min3_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_min2_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_min2_30_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_min2_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_min2_30_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_min2_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_min2_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_min2_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_min2_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_min1_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_min1_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_min1_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_min1_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl0_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/utc_pl0_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl0_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl0_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl1_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/utc_pl1_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl1_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl1_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl2_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl2_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl2_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl2_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl3_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl3_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl3_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl3_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl4_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl4_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl4_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl4_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl4_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl4_30_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl4_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl4_30_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl5_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl5_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl5_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl5_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl5_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl5_30_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl5_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl5_30_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl5_45_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl5_45_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl5_45_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl5_45_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl6_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl6_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl6_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl6_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl6_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl6_30_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl6_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl6_30_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl7_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl7_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl7_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl7_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl8_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl8_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl8_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl8_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl8_45_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl8_45_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl8_45_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl8_45_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl9_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl9_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl9_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl9_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl9_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl9_30_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl9_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl9_30_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl10_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl10_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl10_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl10_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl10_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl10_30_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl10_30_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl10_30_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl11_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl11_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl11_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl11_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl12_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl12_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl12_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl12_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl112_45_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl12_45_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl12_45_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl12_45_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl13_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl13_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl13_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl13_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_utc_pl14_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/utc_pl14_time_zones_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_utc_pl14_time_zones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/utc_pl14_time_zones_textView_text"
+                android:inputType="time"
+                android:tag="timeField"
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>

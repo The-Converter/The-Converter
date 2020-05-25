@@ -162,7 +162,6 @@ class TimeZoneFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setOnClickListener(view: View) {
-
         for ((i, editText) in timeFieldList.withIndex()) {
             editText.setOnFocusChangeListener{ _, hasfocus ->
                 if (hasfocus) {

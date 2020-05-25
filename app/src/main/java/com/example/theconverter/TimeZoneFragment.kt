@@ -23,6 +23,7 @@ import org.w3c.dom.Text
 class TimeZoneFragment : Fragment() {
 
     private var selectedFun: Int = -1
+    private var timeFieldList :MutableList<EditText> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +42,17 @@ class TimeZoneFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.imageButton_choose).setOnClickListener {
             val action = TimeZoneFragmentDirections.actionTimeZoneFragmentToFirstFragment()
             findNavController().navigate(action)
+        }
+
+        val scrollView: ScrollView = view.timeZoneFragment.getChildAt(3) as ScrollView
+        val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
+
+        val childCount = linearLayout.childCount
+
+        for (i in 0 until childCount) {
+            if (linearLayout.getChildAt(i).tag == "timeField") {
+                timeFieldList.add(linearLayout.getChildAt(i) as EditText)
+            }
         }
 
         setOnClickListener(view)
@@ -111,21 +123,11 @@ class TimeZoneFragment : Fragment() {
         return intArrayOf(dayTimeUTC, hourTimeUTC, minTimeUTC)
     }
 
-    private fun setAllTime(timeUTC: IntArray, view: View) {
-        val scrollView: ScrollView = view.timeZoneFragment.getChildAt(1) as ScrollView
-        val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
-
-        val childCount = linearLayout.childCount
-
+    private fun setAllTime(timeUTC: IntArray) {
         val factorArray = resources.getStringArray(R.array.time_zones_factors)
 
-        var count = 0
-
-        for (i in 0 until childCount) {
-            if (linearLayout.getChildAt(i).tag == "timeField") {
-                setOneTime(linearLayout.getChildAt(i) as EditText, fromUTC(timeUTC, factorArray[count]))
-                count++
-            }
+        for ((i, editText) in timeFieldList.withIndex()) {
+            setOneTime(editText, fromUTC(timeUTC, factorArray[i]))
         }
     }
 
@@ -160,262 +162,13 @@ class TimeZoneFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setOnClickListener(view: View) {
-        view.findViewById<EditText>(R.id.editText_utc_min12_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 0
-            }
-        }
 
-        view.findViewById<EditText>(R.id.editText_utc_min11_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 1
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min10_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 2
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min9_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 3
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min9_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 4
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min8_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 5
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min7_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 6
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min6_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 7
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min5_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 8
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min4_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 9
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min3_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 10
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min2_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 11
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min2_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 12
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_min1_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 13
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl0_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 14
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl1_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 15
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl2_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 16
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl3_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 17
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl4_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 18
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl4_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 19
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl5_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 20
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl5_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 21
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl5_45_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 22
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl6_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 23
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl6_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 24
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl7_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 25
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl8_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 26
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl8_45_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 27
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl9_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 28
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl9_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 29
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl10_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 30
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl10_30_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 31
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl11_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 32
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl12_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 33
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl12_45_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 34
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl13_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 35
-            }
-        }
-
-        view.findViewById<EditText>(R.id.editText_utc_pl14_time_zones).setOnFocusChangeListener{ _, hasfocus ->
-            if (hasfocus) {
-                toggleTimeSelVisibility(view)
-                selectedFun = 36
+        for ((i, editText) in timeFieldList.withIndex()) {
+            editText.setOnFocusChangeListener{ _, hasfocus ->
+                if (hasfocus) {
+                    toggleTimeSelVisibility(view)
+                    selectedFun = i
+                }
             }
         }
 
@@ -424,79 +177,79 @@ class TimeZoneFragment : Fragment() {
             timePicker.setIs24HourView(true)
 
             when (selectedFun) {
-                0 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min12)), view)
+                0 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min12)))
 
-                1 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min11)), view)
+                1 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min11)))
 
-                2 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min10)), view)
+                2 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min10)))
 
-                3 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min9_30)), view)
+                3 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min9_30)))
 
-                4 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min9)), view)
+                4 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min9)))
 
-                5 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min8)), view)
+                5 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min8)))
 
-                6 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min7)), view)
+                6 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min7)))
 
-                7 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min6)), view)
+                7 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min6)))
 
-                8 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min5)), view)
+                8 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min5)))
 
-                9 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min4)), view)
+                9 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min4)))
 
-                10 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min3)), view)
+                10 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min3)))
 
-                11 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min2_30)), view)
+                11 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min2_30)))
 
-                12 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min2)), view)
+                12 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min2)))
 
-                13 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min1)), view)
+                13 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min1)))
 
-                14 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl0)), view)
+                14 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl0)))
 
-                15 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl1)), view)
+                15 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl1)))
 
-                16 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl2)), view)
+                16 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl2)))
 
-                17 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl3)), view)
+                17 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl3)))
 
-                18 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl4)), view)
+                18 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl4)))
 
-                19 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl4_30)), view)
+                19 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl4_30)))
 
-                20 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5)), view)
+                20 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5)))
 
-                21 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5_30)), view)
+                21 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5_30)))
 
-                22 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5_45)), view)
+                22 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5_45)))
 
-                23 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl6)), view)
+                23 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl6)))
 
-                24 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl6_30)), view)
+                24 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl6_30)))
 
-                25 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl7)), view)
+                25 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl7)))
 
-                26 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl8)), view)
+                26 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl8)))
 
-                27 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl8_45)), view)
+                27 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl8_45)))
 
-                28 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl9)), view)
+                28 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl9)))
 
-                29 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl9_30)), view)
+                29 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl9_30)))
 
-                30 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl10)), view)
+                30 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl10)))
 
-                31 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl10_30)), view)
+                31 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl10_30)))
 
-                32 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl11)), view)
+                32 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl11)))
 
-                33 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl12)), view)
+                33 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl12)))
 
-                34 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl12_45)), view)
+                34 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl12_45)))
 
-                35 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl13)), view)
+                35 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl13)))
 
-                36 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl14)), view)
+                36 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl14)))
 
                 else -> throw NotImplementedError()
             }

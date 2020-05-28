@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_speed.view.*
 
 /**
  * A simple [Fragment] subclass.

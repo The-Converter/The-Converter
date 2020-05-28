@@ -79,8 +79,8 @@
     <string name="utc_min9_30_time_zones_textView_text">UTC-9:30 (French Polynesia)</string>
     <string name="utc_min9_time_zones_textView_text">UTC-9 (French Polynesia, USA)</string>
     <string name="utc_min8_time_zones_textView_text">UTC-8 (Pitcairn Islands, USA)</string>
-    <string name="utc_min7_time_zones_textView_text">UTC-7 ()</string>
-    <string name="utc_min6_time_zones_textView_text">UTC-6 ()</string>
+    <string name="utc_min7_time_zones_textView_text">UTC-7 (Canada, Mexico, USA)</string>
+    <string name="utc_min6_time_zones_textView_text">UTC-6 (Belize, Canada, Chile, Costa Rica, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, USA)</string>
     <string name="utc_min5_time_zones_textView_text">UTC-5 ()</string>
     <string name="utc_min4_time_zones_textView_text">UTC-4 ()</string>
     <string name="utc_min3_time_zones_textView_text">UTC-3 ()</string>

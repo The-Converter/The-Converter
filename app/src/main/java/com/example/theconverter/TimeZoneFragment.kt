@@ -9,11 +9,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
-import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_time_zone.*
 import kotlinx.android.synthetic.main.fragment_time_zone.view.*
-import org.w3c.dom.Text
 
 /**
  * A simple [Fragment] subclass.
@@ -22,8 +19,8 @@ import org.w3c.dom.Text
  */
 class TimeZoneFragment : Fragment() {
 
-    private var selectedFun: Int = -1
-    private var timeFieldList :MutableList<EditText> = mutableListOf()
+    private var _selectedFun: Int = -1
+    private lateinit var _fragmentUtility: FragmentUtility
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,16 +41,7 @@ class TimeZoneFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        val scrollView: ScrollView = view.timeZoneFragment.getChildAt(3) as ScrollView
-        val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
-
-        val childCount = linearLayout.childCount
-
-        for (i in 0 until childCount) {
-            if (linearLayout.getChildAt(i).tag == "timeField") {
-                timeFieldList.add(linearLayout.getChildAt(i) as EditText)
-            }
-        }
+        _fragmentUtility = FragmentUtility(view.timeZoneFragment)
 
         setOnClickListener(view)
     }
@@ -73,7 +61,7 @@ class TimeZoneFragment : Fragment() {
         else {
             timePicker.visibility = TimePicker.GONE
             button.visibility = TimePicker.GONE
-            selectedFun = -1
+            _selectedFun = -1
         }
     }
 
@@ -126,7 +114,7 @@ class TimeZoneFragment : Fragment() {
     private fun setAllTime(timeUTC: IntArray) {
         val factorArray = resources.getStringArray(R.array.time_zones_factors)
 
-        for ((i, editText) in timeFieldList.withIndex()) {
+        for ((i, editText) in _fragmentUtility.getAllEditTextFromScrollView().withIndex()) {
             setOneTime(editText, fromUTC(timeUTC, factorArray[i]))
         }
     }
@@ -162,11 +150,11 @@ class TimeZoneFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setOnClickListener(view: View) {
-        for ((i, editText) in timeFieldList.withIndex()) {
+        for ((i, editText) in _fragmentUtility.getAllEditTextFromScrollView().withIndex()) {
             editText.setOnFocusChangeListener{ _, hasfocus ->
                 if (hasfocus) {
                     toggleTimeSelVisibility(view)
-                    selectedFun = i
+                    _selectedFun = i
                 }
             }
         }
@@ -175,7 +163,7 @@ class TimeZoneFragment : Fragment() {
             val timePicker = view.findViewById<TimePicker>(R.id.timePicker)
             timePicker.setIs24HourView(true)
 
-            when (selectedFun) {
+            when (_selectedFun) {
                 0 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min12)))
 
                 1 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min11)))

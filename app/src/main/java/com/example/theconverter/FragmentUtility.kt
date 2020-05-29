@@ -31,10 +31,12 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
      */
     fun getAllEditText(forceUpdate: Boolean = false): MutableList<EditText> {
 
-        if (_cachedListId != "AllEditText" || forceUpdate) {
-            _cachedListId = "AllEditText"
+        val listId: String = "AllEditText"
 
+        if (_cachedListId != listId || forceUpdate) {
+            _cachedListId = listId
             _cacheEditTextList = mutableListOf()
+
             val childCount = fragment.childCount
 
             for (i in 0 until childCount) {
@@ -56,8 +58,10 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
      */
     fun getAllEditTextFromScrollView(forceUpdate: Boolean = false): MutableList<EditText> {
 
-        if (_cachedListId != "AllEditTextFromScrollView" || forceUpdate) {
-            _cachedListId = "AllEditTextFromScrollView"
+        val listId: String = "AllEditTextFromScrollView"
+
+        if (_cachedListId != listId || forceUpdate) {
+            _cachedListId = listId
 
             _cacheEditTextList = mutableListOf()
 
@@ -96,8 +100,10 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
      */
     fun getViewsByTag(tag: String = "", forceUpdate: Boolean = false): MutableList<View> {
 
-        if ((_cachedListId != "ViewsByTag" || forceUpdate) && tag != "") {
-            _cachedListId = "ViewsByTag"
+        val listId: String = "ViewsByTag"
+
+        if ((_cachedListId != listId || forceUpdate) && tag != "") {
+            _cachedListId = listId
 
             _cacheViewList = mutableListOf()
             val childCount = fragment.childCount
@@ -109,7 +115,7 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
             }
         }
 
-        if (_cachedListId == "ViewsByTag") {
+        if (_cachedListId == listId) {
             return _cacheViewList
         }
         else {
@@ -127,8 +133,10 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
      */
     fun getViewsByTagFromScrollView(tag: String = "", forceUpdate: Boolean = false): MutableList<View> {
 
-        if ((_cachedListId != "ViewsByTagFromScrollView" || forceUpdate) && tag != "") {
-            _cachedListId = "ViewsByTagFromScrollView"
+        val listId: String = "ViewsByTagFromScrollView"
+
+        if ((_cachedListId != listId || forceUpdate) && tag != "") {
+            _cachedListId = listId
 
             _cacheViewList = mutableListOf()
 
@@ -142,7 +150,7 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
             }
         }
 
-        if (_cachedListId == "ViewsByTagFromScrollView") {
+        if (_cachedListId == listId) {
             return _cacheViewList
         }
         else {
@@ -160,8 +168,10 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
      */
     fun getEditTextByTag(tag: String = "", forceUpdate: Boolean = false): MutableList<EditText> {
 
-        if ((_cachedListId != "EditTextsByTag" || forceUpdate) && tag != "") {
-            _cachedListId = "EditTextsByTag"
+        val listId: String = "EditTextsByTag"
+
+        if ((_cachedListId != listId || forceUpdate) && tag != "") {
+            _cachedListId = listId
 
             _cacheEditTextList = mutableListOf()
             val childCount = fragment.childCount
@@ -173,7 +183,7 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
             }
         }
 
-        if (_cachedListId == "EditTextsByTag") {
+        if (_cachedListId == listId) {
             return _cacheEditTextList
         }
         else {
@@ -191,8 +201,10 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
      */
     fun getEditTextsByTagFromScrollView(tag: String = "", forceUpdate: Boolean = false): MutableList<EditText> {
 
-        if ((_cachedListId != "EditTextsByTagFromScrollView" || forceUpdate) && tag != "") {
-            _cachedListId = "EditTextsByTagFromScrollView"
+        val listId: String = "EditTextsByTagFromScrollView"
+
+        if ((_cachedListId != listId || forceUpdate) && tag != "") {
+            _cachedListId = listId
 
             _cacheEditTextList = mutableListOf()
 

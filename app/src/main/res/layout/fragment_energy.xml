@@ -53,6 +53,7 @@
                 android:ems="10"
                 android:hint="@string/joule_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_joule_energy" />
 
@@ -78,6 +79,7 @@
                 android:ems="10"
                 android:hint="@string/joule_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_kilojoule_energy" />
 
@@ -103,6 +105,7 @@
                 android:ems="10"
                 android:hint="@string/calorie_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_calorie_energy" />
 
@@ -128,6 +131,7 @@
                 android:ems="10"
                 android:hint="@string/kilocalorie_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_kilocalorie_energy" />
 
@@ -153,6 +157,7 @@
                 android:ems="10"
                 android:hint="@string/watt_hour_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_watt_hour_energy" />
 
@@ -178,6 +183,7 @@
                 android:ems="10"
                 android:hint="@string/kilowatt_hour_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_kilowatt_hour_energy" />
 
@@ -203,6 +209,7 @@
                 android:ems="10"
                 android:hint="@string/british_thermal_unit_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_british_thermal_unit_energy" />
 
@@ -228,6 +235,7 @@
                 android:ems="10"
                 android:hint="@string/foot_pound_energy_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_british_thermal_unit_energy" />
 

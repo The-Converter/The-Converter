@@ -111,6 +111,13 @@
     <string name="utc_pl13_time_zones_textView_text">UTC+13 ()</string>
     <string name="utc_pl14_time_zones_textView_text">UTC+14 ()</string>
 
+    <!-- Text for credits -->
+    <string name="credits_heading_textView_text">Credits</string>
+    <string name="credits_us_textView_text">We (Bence, Elias, Sebastian) are students at the HTBLA Leonding and this is our first project at this school.
+    If you want to see the source-code of this app click the following link: <a href="https://github.com/The-Converter/The-Converter">https://github.com/The-Converter/The-Converter</a></string>
+    <string name="credits_extern_textView_text">We used a small library called \"mXparser\" which helped us parse quiet difficult calculations from the resources.
+    To see its license and/or source-code click the following link: <a href="https://github.com/mariuszgromada/MathParser.org-mXparser/blob/master/LICENSE.txt">https://github.com/mariuszgromada/MathParser.org-mXparser/blob/master/LICENSE.txt</a></string>
+
 
     <!-- Strings used for EditText -->
     <string name="km_area_editText">km²</string>
@@ -199,7 +206,6 @@
     <string name="us_liquid_quart_volume_editText">Imp. qt</string>
     <string name="us_dry_pint_volume_editText">pt</string>
     <string name="us_liquid_pint_volume_editText">pt</string>
-    
 
 
     <!--  Strings used for Buttons -->
@@ -212,6 +218,8 @@
     <string name="energy_button_text">Energy</string>
     <string name="volume_button_text">Volume</string>
 
+    <string name="credits_button_text">Credits</string>
+
     <string name="done_button_text">Done</string>
 
     <!-- Strings used for outputs -->
@@ -220,6 +228,9 @@
 
     <!-- Strings used for content description -->
     <string name="ic_button_choose_description">Choose</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

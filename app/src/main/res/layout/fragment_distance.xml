@@ -54,6 +54,7 @@
                 android:ems="10"
                 android:hint="@string/km_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_km_distance" />
 
@@ -79,6 +80,7 @@
                 android:ems="10"
                 android:hint="@string/m_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_m_distance" />
 
@@ -104,6 +106,7 @@
                 android:ems="10"
                 android:hint="@string/dm_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_dm_distance" />
 
@@ -129,6 +132,7 @@
                 android:ems="10"
                 android:hint="@string/cm_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cm_distance" />
 
@@ -154,6 +158,7 @@
                 android:ems="10"
                 android:hint="@string/mm_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_mm_distance" />
 
@@ -179,6 +184,7 @@
                 android:ems="10"
                 android:hint="@string/miles_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_miles_distance" />
 
@@ -204,6 +210,7 @@
                 android:ems="10"
                 android:hint="@string/yard_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_yard_distance" />
 
@@ -229,6 +236,7 @@
                 android:ems="10"
                 android:hint="@string/foot_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_yard_distance" />
 
@@ -254,6 +262,7 @@
                 android:ems="10"
                 android:hint="@string/seaMile_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_seaMile_distance" />
 
@@ -279,6 +288,7 @@
                 android:ems="10"
                 android:hint="@string/inch_distance_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_inch_distance" />
 

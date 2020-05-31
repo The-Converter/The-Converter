@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.ImageButton
-import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 
 
@@ -36,36 +36,54 @@ class TemperatureFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        view.findViewById<EditText>(R.id.editText_celsius).doAfterTextChanged { content ->
-            if(!changedByApp) {
-                if (content.isNullOrEmpty()) {
-                    clearEditText(view)
-                }
-                else{
-                    inputCelsius(view, content.toString().toDouble())
-                }
+        view.findViewById<EditText>(R.id.editText_celsius).setOnEditorActionListener { _, actionId, event ->
+
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                view.findViewById<EditText>(R.id.editText_celsius).clearFocus()
+                true
+            }
+            else {
+                false
             }
         }
 
-        view.findViewById<EditText>(R.id.editText_fahrenheit).doAfterTextChanged { content ->
-            if(!changedByApp) {
-                if (content.isNullOrEmpty()) {
-                    clearEditText(view)
-                }
-                else{
-                    inputFahrenheit(view, content.toString().toDouble())
-                }
+        view.findViewById<EditText>(R.id.editText_celsius).setOnFocusChangeListener { _, hasfocus ->
+            if(!hasfocus) {
+                inputCelsius(view, view.findViewById<EditText>(R.id.editText_celsius).text.toString().toDouble())
             }
         }
 
-        view.findViewById<EditText>(R.id.editText_kelvin).doAfterTextChanged { content ->
-            if(!changedByApp) {
-                if (content.isNullOrEmpty()) {
-                    clearEditText(view)
-                }
-                else{
-                    inputKelvin(view, content.toString().toDouble())
-                }
+        view.findViewById<EditText>(R.id.editText_fahrenheit).setOnEditorActionListener { _, actionId, event ->
+
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                view.findViewById<EditText>(R.id.editText_fahrenheit).clearFocus()
+                true
+            }
+            else {
+                false
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_fahrenheit).setOnFocusChangeListener { _, hasfocus ->
+            if(!hasfocus) {
+                inputFahrenheit(view, view.findViewById<EditText>(R.id.editText_fahrenheit).text.toString().toDouble())
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_kelvin).setOnEditorActionListener { _, actionId, event ->
+
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                view.findViewById<EditText>(R.id.editText_kelvin).clearFocus()
+                true
+            }
+            else {
+                false
+            }
+        }
+
+        view.findViewById<EditText>(R.id.editText_kelvin).setOnFocusChangeListener { _, hasfocus ->
+            if(!hasfocus) {
+                inputCelsius(view, view.findViewById<EditText>(R.id.editText_kelvin).text.toString().toDouble())
             }
         }
     }

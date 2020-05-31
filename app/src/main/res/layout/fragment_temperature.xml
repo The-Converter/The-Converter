@@ -30,6 +30,7 @@
         android:ems="10"
         android:hint="@string/celsius_textView_text"
         android:inputType="numberDecimal|numberSigned"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_celsius" />
 
@@ -55,6 +56,7 @@
         android:ems="10"
         android:hint="@string/fahrenheit_textView_text"
         android:inputType="numberDecimal|numberSigned"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_fahrenheit" />
 
@@ -80,6 +82,7 @@
         android:ems="10"
         android:hint="@string/kelvin_textView_text"
         android:inputType="numberDecimal|numberSigned"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_kelvin" />
 

@@ -40,6 +40,18 @@
     <string name="sq_cm_mi">3.861021585424e-11</string>
     <string name="sq_mm_mi">3.861021585424e-13</string>
 
+    <string-array
+        name="area_factors" >
+
+        <item>*100^1</item>
+        <item>*100^2</item>
+        <item>*100^3</item>
+        <item>*100^4</item>
+        <item>*100^5</item>
+        <item>*100^6</item>
+        <item>*0.3861021585424</item>
+    </string-array>
+
     <!-- distance -->
     <string name="dis_km_m">1000</string>
     <string name="dis_km_dm">10000</string>

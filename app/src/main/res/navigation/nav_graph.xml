@@ -38,10 +38,13 @@
             android:id="@+id/action_FirstFragment_to_energyFragment"
             app:destination="@id/energyFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
-            app:destination="@id/energyFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_volumeFragment"
             app:destination="@id/volumeFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_FirstFragment_to_creditFragment"
+            app:destination="@id/creditFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
@@ -121,6 +124,7 @@
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim"/>
     </fragment>
+
     <fragment
         android:id="@+id/volumeFragment"
         android:name="com.example.theconverter.VolumeFragment"
@@ -130,5 +134,16 @@
             android:id="@+id/action_volumeFragment_to_FirstFragment"
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/creditFragment"
+        android:name="com.example.theconverter.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" >
+        <action
+            android:id="@+id/action_credits_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
 </navigation>

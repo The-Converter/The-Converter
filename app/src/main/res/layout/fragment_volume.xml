@@ -51,6 +51,7 @@
                 android:ems="10"
                 android:hint="@string/cubic_meter_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_meter_volume" />
 
@@ -76,6 +77,7 @@
                 android:ems="10"
                 android:hint="@string/liter_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_meter_volume" />
 
@@ -101,6 +103,7 @@
                 android:ems="10"
                 android:hint="@string/cubic_centimeter_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_centimeter_volume" />
 
@@ -126,6 +129,7 @@
                 android:ems="10"
                 android:hint="@string/milliliter_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_milliliter_volume" />
 
@@ -151,6 +155,7 @@
                 android:ems="10"
                 android:hint="@string/cubic_foot_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_foot_volume" />
 
@@ -176,6 +181,7 @@
                 android:ems="10"
                 android:hint="@string/cubic_inch_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_inch_volume" />
 
@@ -201,6 +207,7 @@
                 android:ems="10"
                 android:hint="@string/cubic_yard_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_cubic_yard_volume" />
 
@@ -226,6 +233,7 @@
                 android:ems="10"
                 android:hint="@string/us_dry_gallon_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_dry_gallon_volume" />
 
@@ -251,6 +259,7 @@
                 android:ems="10"
                 android:hint="@string/us_liquid_gallon_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_liquid_gallon_volume" />
 
@@ -276,6 +285,7 @@
                 android:ems="10"
                 android:hint="@string/us_dry_quart_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_dry_quart_volume" />
 
@@ -301,6 +311,7 @@
                 android:ems="10"
                 android:hint="@string/us_liquid_quart_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_liquid_quart_volume" />
 
@@ -326,6 +337,7 @@
                 android:ems="10"
                 android:hint="@string/us_dry_pint_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_dry_pint_volume" />
 
@@ -351,6 +363,7 @@
                 android:ems="10"
                 android:hint="@string/us_liquid_pint_volume_editText"
                 android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_us_liquid_pint_volume" />
 

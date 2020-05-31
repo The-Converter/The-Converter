@@ -63,6 +63,11 @@ class FirstFragment : Fragment() {
             val action = FirstFragmentDirections.actionFirstFragmentToVolumeFragment()
             findNavController().navigate(action)
         }
+
+        view.findViewById<Button>(R.id.button_credits).setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToCreditFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

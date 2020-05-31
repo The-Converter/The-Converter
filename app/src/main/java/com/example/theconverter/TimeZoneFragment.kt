@@ -43,6 +43,9 @@ class TimeZoneFragment : Fragment() {
 
         _fragmentUtility = FragmentUtility(view.timeZoneFragment)
 
+        // cache list with tags
+        _fragmentUtility.getEditTexts(true, "timeField")
+
         setOnClickListener(view)
     }
 
@@ -114,7 +117,7 @@ class TimeZoneFragment : Fragment() {
     private fun setAllTime(timeUTC: IntArray) {
         val factorArray = resources.getStringArray(R.array.time_zones_factors)
 
-        for ((i, editText) in _fragmentUtility.getAllEditTextFromScrollView().withIndex()) {
+        for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
             setOneTime(editText, fromUTC(timeUTC, factorArray[i]))
         }
     }
@@ -150,7 +153,7 @@ class TimeZoneFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setOnClickListener(view: View) {
-        for ((i, editText) in _fragmentUtility.getAllEditTextFromScrollView().withIndex()) {
+        for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
             editText.setOnFocusChangeListener{ _, hasfocus ->
                 if (hasfocus) {
                     toggleTimeSelVisibility(view)

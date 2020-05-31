@@ -42,6 +42,7 @@
         android:ems="10"
         android:hint="@string/day_time_editText"
         android:inputType="number|numberDecimal"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_d" />
 
@@ -67,6 +68,7 @@
         android:ems="10"
         android:hint="@string/hour_time_editText"
         android:inputType="number|numberDecimal"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_h" />
 
@@ -92,6 +94,7 @@
         android:ems="10"
         android:hint="@string/minute_time_editText"
         android:inputType="number|numberDecimal"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_min" />
 
@@ -117,6 +120,7 @@
         android:ems="10"
         android:hint="@string/second_time_editText"
         android:inputType="number|numberDecimal"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_sec" />
 
@@ -141,6 +145,7 @@
         android:autofillHints="none"
         android:ems="10"
         android:inputType="number|numberDecimal"
+        android:imeOptions="actionDone"
         android:hint="@string/millisecond_time_editText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_ms" />

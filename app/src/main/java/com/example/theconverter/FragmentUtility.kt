@@ -3,6 +3,8 @@ package com.example.theconverter
 import android.view.View
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 
 /**
  * Utility class for Fragments
@@ -17,31 +19,44 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
 
     // no public properties because getter doesn't take arguments
 
-    private var _cacheViewList: MutableList<View> = mutableListOf()
     private var _cacheEditTextList: MutableList<EditText> = mutableListOf()
 
-    private var _cachedListId: String = ""
-
     /**
-     * Get all EditTexts that are child of the fragment
-     * MutableList gets cached but a update can be forced
+     * Get all EditTexts that are child of the fragment also if they're child of a ScrollView in the fragment
+     * List can be filtered by a tag
+     * List will be cached, update can be forced
      *
      * @param [forceUpdate] set to true if you want to force an update
-     * @return [_editTextList] MutableList of EditTexts
+     * @param [tag] set a tag to filter by, default is no filter
+     *
+     * @return [_cacheEditTextList] MutableList of EditTexts
      */
-    fun getAllEditText(forceUpdate: Boolean = false): MutableList<EditText> {
+    fun getEditTexts(forceUpdate: Boolean = false, tag: String = ""): MutableList<EditText> {
 
-        val listId: String = "AllEditText"
-
-        if (_cachedListId != listId || forceUpdate) {
-            _cachedListId = listId
+        if (forceUpdate || _cacheEditTextList.isEmpty()) {
             _cacheEditTextList = mutableListOf()
-
-            val childCount = fragment.childCount
+            var childCount = fragment.childCount
 
             for (i in 0 until childCount) {
-                if (fragment.getChildAt(i) is EditText) {
-                    _cacheEditTextList.add(fragment.getChildAt(i) as EditText)
+                val actChild = fragment.getChildAt(i)
+
+                if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
+                    _cacheEditTextList.add(actChild)
+                }
+            }
+
+            val scrollViewNullable: ScrollView? = getScrollView()
+
+            scrollViewNullable?.let { scrollView ->
+                val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
+                childCount = linearLayout.childCount
+
+                for (i in 0 until childCount) {
+                    val actChild = linearLayout.getChildAt(i)
+
+                    if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
+                        _cacheEditTextList.add(actChild)
+                    }
                 }
             }
         }
@@ -49,36 +64,7 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
         return _cacheEditTextList
     }
 
-    /**
-     * Get all EditTexts that are child of the ScrollView in the fragment
-     * MutableList gets cached but a update can be forced
-     *
-     * @param [forceUpdate] set to true if you want to force an update
-     * @return [_editTextFromScrollViewList] MutableList of EditTexts contained by the ScrollView
-     */
-    fun getAllEditTextFromScrollView(forceUpdate: Boolean = false): MutableList<EditText> {
-
-        val listId: String = "AllEditTextFromScrollView"
-
-        if (_cachedListId != listId || forceUpdate) {
-            _cachedListId = listId
-
-            _cacheEditTextList = mutableListOf()
-
-            val linearLayout: LinearLayout = getScrollView().getChildAt(0) as LinearLayout
-            val childCount = linearLayout.childCount
-
-            for (i in 0 until childCount) {
-                if (linearLayout.getChildAt(i) is EditText) {
-                    _cacheEditTextList.add(linearLayout.getChildAt(i) as EditText)
-                }
-            }
-        }
-
-        return _cacheEditTextList
-    }
-
-    private fun getScrollView(): ScrollView {
+    private fun getScrollView(): ScrollView? {
         val childCount = fragment.childCount
 
         for (i in 0 until childCount) {
@@ -87,142 +73,21 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
             }
         }
 
-        throw ClassNotFoundException("Couldn't find a ScrollView in $fragment")
+        return null
     }
 
     /**
-     * Get all views that are child of the fragment, filtered by a tag
-     * MutableList gets cached but a update can be forced
+     * Sets up a onclick listener to perform a navigation
      *
-     * @param [tag] tag to filter by, can be left empty if the last request was to this function
-     * @param [forceUpdate] set to true if you want to force an update
-     * @return [_cacheViewList] New MutableList of Views in the fragment, filtered by Tag
+     * @param [view] View, needed to get ImageButton
+     * @param [navController] NavController, needed for navigation
+     * @param [action] where to navigate to
+     * @param [id] id of the image button, standard is imageButton_choose
      */
-    fun getViewsByTag(tag: String = "", forceUpdate: Boolean = false): MutableList<View> {
+    fun setReturnButton(view: View, navController: NavController, action: NavDirections, id: Int = R.id.imageButton_choose) {
 
-        val listId: String = "ViewsByTag"
-
-        if ((_cachedListId != listId || forceUpdate) && tag != "") {
-            _cachedListId = listId
-
-            _cacheViewList = mutableListOf()
-            val childCount = fragment.childCount
-
-            for (i in 0 until childCount) {
-                if (fragment.getChildAt(i).tag == tag) {
-                    _cacheViewList.add(fragment.getChildAt(i))
-                }
-            }
-        }
-
-        if (_cachedListId == listId) {
-            return _cacheViewList
-        }
-        else {
-            return mutableListOf()
-        }
-    }
-
-    /**
-     * Get all views that are child of the ScrollView in the fragment, filtered by a tag
-     * MutableList gets cached but a update can be forced
-     *
-     * @param [tag] tag to filter by, can be left empty if the last request was to this function
-     * @param [forceUpdate] set to true if you want to force an update
-     * @return [_viewsByTagFromScrollViewList] New MutableList of Views contained by the ScrollView, filtered by Tag
-     */
-    fun getViewsByTagFromScrollView(tag: String = "", forceUpdate: Boolean = false): MutableList<View> {
-
-        val listId: String = "ViewsByTagFromScrollView"
-
-        if ((_cachedListId != listId || forceUpdate) && tag != "") {
-            _cachedListId = listId
-
-            _cacheViewList = mutableListOf()
-
-            val linearLayout: LinearLayout = getScrollView().getChildAt(0) as LinearLayout
-            val childCount = linearLayout.childCount
-
-            for (i in 0 until childCount) {
-                if (linearLayout.getChildAt(i).tag == tag) {
-                    _cacheViewList.add(linearLayout.getChildAt(i))
-                }
-            }
-        }
-
-        if (_cachedListId == listId) {
-            return _cacheViewList
-        }
-        else {
-            return mutableListOf()
-        }
-    }
-
-    /**
-     * Get all EditTexts that are child of the fragment, filtered by a tag
-     * MutableList gets cached but a update can be forced
-     *
-     * @param [tag] tag to filter by, can be left empty if the last request was to this function
-     * @param [forceUpdate] set to true if you want to force an update
-     * @return [_editTextByTagList] New MutableList of EditTexts in the fragment, filtered by Tag
-     */
-    fun getEditTextByTag(tag: String = "", forceUpdate: Boolean = false): MutableList<EditText> {
-
-        val listId: String = "EditTextsByTag"
-
-        if ((_cachedListId != listId || forceUpdate) && tag != "") {
-            _cachedListId = listId
-
-            _cacheEditTextList = mutableListOf()
-            val childCount = fragment.childCount
-
-            for (i in 0 until childCount) {
-                if (fragment.getChildAt(i).tag == tag && fragment.getChildAt(i) is EditText) {
-                    _cacheEditTextList.add(fragment.getChildAt(i) as EditText)
-                }
-            }
-        }
-
-        if (_cachedListId == listId) {
-            return _cacheEditTextList
-        }
-        else {
-            return mutableListOf()
-        }
-    }
-
-    /**
-     * Get all EditTexts that are child of the ScrollView in the fragment, filtered by a tag
-     * MutableList gets cached but a update can be forced
-     *
-     * @param [tag] tag to filter by, can be left empty if the last request was to this function
-     * @param [forceUpdate] set to true if you want to force an update
-     * @return [_editTextFromScrollViewList] New MutableList of EditTexts contained by the Scrollview, filtered by Tag
-     */
-    fun getEditTextsByTagFromScrollView(tag: String = "", forceUpdate: Boolean = false): MutableList<EditText> {
-
-        val listId: String = "EditTextsByTagFromScrollView"
-
-        if ((_cachedListId != listId || forceUpdate) && tag != "") {
-            _cachedListId = listId
-
-            _cacheEditTextList = mutableListOf()
-
-            val linearLayout: LinearLayout = getScrollView().getChildAt(0) as LinearLayout
-            val childCount = linearLayout.childCount
-
-            for (i in 0 until childCount) {
-                if (linearLayout.getChildAt(i).tag == tag && linearLayout.getChildAt(i) is EditText) {
-                    _cacheEditTextList.add(linearLayout.getChildAt(i) as EditText)
-                }
-            }
-        }
-
-        if (_cachedListId == "EditTextsByTagFromScrollView") {
-            return _cacheEditTextList
-        }
-        else {
-            return mutableListOf()
+        view.findViewById<ImageButton>(id).setOnClickListener {
+            navController.navigate(action)
         }
     }
 }

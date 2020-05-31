@@ -34,34 +34,38 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
     fun getEditTexts(forceUpdate: Boolean = false, tag: String = ""): MutableList<EditText> {
 
         if (forceUpdate || _cacheEditTextList.isEmpty()) {
-            _cacheEditTextList = mutableListOf()
-            var childCount = fragment.childCount
+            setEditText(tag)
+        }
 
-            for (i in 0 until childCount) {
-                val actChild = fragment.getChildAt(i)
+        return _cacheEditTextList
+    }
+
+    private fun setEditText(tag: String) {
+        _cacheEditTextList = mutableListOf()
+        val childCountFragment = fragment.childCount
+
+        for (i in 0 until childCountFragment) {
+            val actChild = fragment.getChildAt(i)
+
+            if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
+                _cacheEditTextList.add(actChild)
+            }
+        }
+
+        val scrollViewNullable: ScrollView? = getScrollView()
+
+        scrollViewNullable?.let { scrollView ->
+            val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
+            val childCountScrollView = linearLayout.childCount
+
+            for (i in 0 until childCountScrollView) {
+                val actChild = linearLayout.getChildAt(i)
 
                 if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
                     _cacheEditTextList.add(actChild)
                 }
             }
-
-            val scrollViewNullable: ScrollView? = getScrollView()
-
-            scrollViewNullable?.let { scrollView ->
-                val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
-                childCount = linearLayout.childCount
-
-                for (i in 0 until childCount) {
-                    val actChild = linearLayout.getChildAt(i)
-
-                    if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
-                        _cacheEditTextList.add(actChild)
-                    }
-                }
-            }
         }
-
-        return _cacheEditTextList
     }
 
     private fun getScrollView(): ScrollView? {

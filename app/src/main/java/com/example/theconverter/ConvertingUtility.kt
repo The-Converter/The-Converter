@@ -18,6 +18,9 @@ import org.mariuszgromada.math.mxparser.*
  */
 class ConvertingUtility (private val editTexts: MutableList<EditText>, private val factorArray: Array<String>, private val outputString: String = "", private val toBaseFactorArray: Array<String> = arrayOf()) {
 
+    /**
+     * Sets the listeners
+     */
     fun setListeners() {
 
         for ((i, editText) in editTexts.withIndex()) {

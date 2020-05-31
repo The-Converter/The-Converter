@@ -1,6 +1,7 @@
 package com.example.theconverter
 
 import android.view.View
+import android.view.ViewGroup
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.NavController
@@ -42,28 +43,25 @@ class FragmentUtility (private val fragment: ConstraintLayout) {
 
     private fun setEditText(tag: String) {
         _cacheEditTextList = mutableListOf()
-        val childCountFragment = fragment.childCount
 
-        for (i in 0 until childCountFragment) {
-            val actChild = fragment.getChildAt(i)
-
-            if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
-                _cacheEditTextList.add(actChild)
-            }
-        }
+        checkViewGroupChildren(fragment, tag)
 
         val scrollViewNullable: ScrollView? = getScrollView()
 
         scrollViewNullable?.let { scrollView ->
             val linearLayout: LinearLayout = scrollView.getChildAt(0) as LinearLayout
-            val childCountScrollView = linearLayout.childCount
+            checkViewGroupChildren(linearLayout, tag)
+        }
+    }
 
-            for (i in 0 until childCountScrollView) {
-                val actChild = linearLayout.getChildAt(i)
+    private fun checkViewGroupChildren(viewGroup: ViewGroup, tag: String) {
+        val childCount = viewGroup.childCount
 
-                if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
-                    _cacheEditTextList.add(actChild)
-                }
+        for (i in 0 until childCount) {
+            val actChild = viewGroup.getChildAt(i)
+
+            if (actChild is EditText && (tag == "" || actChild.tag == tag)) {
+                _cacheEditTextList.add(actChild)
             }
         }
     }

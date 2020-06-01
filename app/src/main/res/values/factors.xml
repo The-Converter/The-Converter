@@ -23,23 +23,6 @@
     <string name="fahrenheit_kelvin_subtract">459.67</string>
 
     <!-- area -->
-    <integer name="factor_area">100</integer>
-
-    <integer name="one_step">1</integer>
-    <integer name="two_steps">2</integer>
-    <integer name="three_steps">3</integer>
-    <integer name="four_steps">4</integer>
-    <integer name="five_steps">5</integer>
-    <integer name="six_steps">6</integer>
-
-    <string name="sq_km_mi">0.3861021585424</string>
-    <string name="sq_ha_mi">0.003861021585424</string>
-    <string name="sq_ar_mi">0.00003861021585424</string>
-    <string name="sq_m_mi">3.861021585424e-7</string>
-    <string name="sq_dm_mi">3.861021585424e-9</string>
-    <string name="sq_cm_mi">3.861021585424e-11</string>
-    <string name="sq_mm_mi">3.861021585424e-13</string>
-
     <string-array
         name="area_factors" >
 
@@ -53,59 +36,19 @@
     </string-array>
 
     <!-- distance -->
-    <string name="dis_km_m">1000</string>
-    <string name="dis_km_dm">10000</string>
-    <string name="dis_km_cm">100000</string>
-    <string name="dis_km_mm">1000000</string>
-    <string name="dis_km_miles">0.621371</string>
-    <string name="dis_km_yard">1093.61</string>
-    <string name="dis_km_foot">3280.84</string>
-    <string name="dis_km_seaMile">0.539957</string>
-    <string name="dis_km_inch">39370.1</string>
+    <string-array
+        name="distance_factors" >
 
-    <string name="dis_m_dm">10</string>
-    <string name="dis_m_cm">100</string>
-    <string name="dis_m_mm">1000</string>
-    <string name="dis_m_miles">0.000621371</string>
-    <string name="dis_m_yard">1.09361</string>
-    <string name="dis_m_foot">3.28084</string>
-    <string name="dis_m_seaMile">0.000539957</string>
-    <string name="dis_m_inch">19.3701</string>
-
-    <string name="dis_dm_cm">10</string>
-    <string name="dis_dm_mm">100</string>
-    <string name="dis_dm_miles">0.0000621371</string>
-    <string name="dis_dm_yard">0.109361</string>
-    <string name="dis_dm_foot">0.328084</string>
-    <string name="dis_dm_seaMile">0.0000539957</string>
-    <string name="dis_dm_inch">1.93701</string>
-
-    <string name="dis_cm_mm">10</string>
-    <string name="dis_cm_miles">0.00000621371</string>
-    <string name="dis_cm_yard">0.0109361</string>
-    <string name="dis_cm_foot">0.0328084</string>
-    <string name="dis_cm_seaMile">0.00000539957</string>
-    <string name="dis_cm_inch">0.193701</string>
-
-    <string name="dis_mm_miles">0.000000621371</string>
-    <string name="dis_mm_yard">0.00109361</string>
-    <string name="dis_mm_foot">0.00328084</string>
-    <string name="dis_mm_seaMile">0.000000539957</string>
-    <string name="dis_mm_inch">0.0193701</string>
-
-    <string name="dis_miles_yard">1760</string>
-    <string name="dis_miles_foot">5280</string>
-    <string name="dis_miles_seaMile">0.868976</string>
-    <string name="dis_miles_inch">63360</string>
-
-    <string name="dis_yard_foot">3</string>
-    <string name="dis_yard_seaMile">0.000493737</string>
-    <string name="dis_yard_inch">36</string>
-
-    <string name="dis_foot_seaMile">0.000164579</string>
-    <string name="dis_foot_inch">12</string>
-
-    <string name="dis_seaMile_inch">0.0000137133</string>
+        <item>*10^3</item>
+        <item>*10^4</item>
+        <item>*10^5</item>
+        <item>*10^6</item>
+        <item>*0.621371</item>
+        <item>*1093.61</item>
+        <item>*3280.84</item>
+        <item>*0.539957</item>
+        <item>*39370.1</item>
+    </string-array>
 
     <!-- time -->
 

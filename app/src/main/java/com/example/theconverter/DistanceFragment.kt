@@ -32,7 +32,7 @@ class DistanceFragment : Fragment() {
         val fragmentUtility = FragmentUtility(view.distanceFragment)
         fragmentUtility.setReturnButton(view, findNavController(), DistanceFragmentDirections.actionDistanceFragmentToFirstFragment())
 
-        val convertingUtility = ConvertingUtility(fragmentUtility.getEditTexts(), resources.getStringArray(R.array.distance_factors))
+        val convertingUtility = ConvertingUtility(fragmentUtility, context, resources.getStringArray(R.array.distance_factors))
         convertingUtility.setListeners()
     }
 }

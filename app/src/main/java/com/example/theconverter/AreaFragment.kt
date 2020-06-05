@@ -29,7 +29,7 @@ class AreaFragment : Fragment() {
         val fragmentUtility: FragmentUtility = FragmentUtility(view.areaFragment)
         fragmentUtility.setReturnButton(view, findNavController(), AreaFragmentDirections.actionAreaFragmentToFirstFragment())
 
-        val convertingUtility: ConvertingUtility = ConvertingUtility(fragmentUtility.getEditTexts(), resources.getStringArray(R.array.area_factors))
+        val convertingUtility: ConvertingUtility = ConvertingUtility(fragmentUtility, context, resources.getStringArray(R.array.area_factors))
         convertingUtility.setListeners()
     }
 }

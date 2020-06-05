@@ -114,98 +114,23 @@
     <string name="energy_british_thermal_unit_foot_pound">778.169</string>
 
     <!-- volume -->
-    
-    <string name="volume_meter_liter">1000</string>
-    <string name="volume_meter_centimeter">1000000</string>
-    <string name="volume_meter_milliliter">1000000000</string>
-    <string name="volume_meter_foot">35.31467</string>
-    <string name="volume_meter_inch">61023.74409</string>
-    <string name="volume_meter_us_dry_gallon">227.02075</string>
-    <string name="volume_meter_us_liquid_gallon">264.17205</string>
-    <string name="volume_meter_us_dry_quart">908.08298</string>
-    <string name="volume_meter_us_liquid_quart">1056.68821</string>
-    <string name="volume_meter_us_dry_pint">1816.16597</string>
-    <string name="volume_meter_us_liquid_pint">2113.37642</string>
-    <string name="volume_meter_yard">1.30795</string>
 
-    <string name="volume_liter_centimeter">1000</string>
-    <string name="volume_liter_milliliter">1000000</string>
-    <string name="volume_liter_foot">0.03531</string>
-    <string name="volume_liter_inch">61.02374</string>
-    <string name="volume_liter_us_dry_gallon">0.22702075</string>
-    <string name="volume_liter_us_liquid_gallon">0.26417205</string>
-    <string name="volume_liter_us_dry_quart">0.90808298</string>
-    <string name="volume_liter_us_liquid_quart">1.05668821</string>
-    <string name="volume_liter_us_dry_pint">1.81617</string>
-    <string name="volume_liter_us_liquid_pint">2.11337642</string>
-    <string name="volume_liter_yard">0.00130795</string>
+    <string-array
+        name="volume_factors" >
 
-    <string name="volume_centimeter_milliliter">1000</string>
-    <string name="volume_centimeter_foot">0.00003531</string>
-    <string name="volume_centimeter_inch">0.06102374</string>
-    <string name="volume_centimeter_us_dry_gallon">0.0002270275</string>
-    <string name="volume_centimeter_us_liquid_gallon">0.00026417205</string>
-    <string name="volume_centimeter_us_dry_quart">0.00090808298</string>
-    <string name="volume_centimeter_us_liquid_quart">0.00105668821</string>
-    <string name="volume_centimeter_us_dry_pint">0.00181617</string>
-    <string name="volume_centimeter_us_liquid_pint">0.00211337642</string>
-    <string name="volume_centimeter_yard">0.00000130795</string>
-
-    <string name="volume_milliliter_foot">0.00000003531</string>
-    <string name="volume_milliliter_inch">0.00006102374</string>
-    <string name="volume_milliliter_us_dry_gallon">0.0000002270275</string>
-    <string name="volume_milliliter_us_liquid_gallon">0.00000026417205</string>
-    <string name="volume_milliliter_us_dry_quart">0.00000090808298</string>
-    <string name="volume_milliliter_us_liquid_quart">0.00000105668821</string>
-    <string name="volume_milliliter_us_dry_pint">0.00000181617</string>
-    <string name="volume_milliliter_us_liquid_pint">0.00000211337642</string>
-    <string name="volume_milliliter_yard">0.00000000130795</string>
-
-    <string name="volume_foot_inch">1728</string>
-    <string name="volume_foot_us_dry_gallon">6.42851</string>
-    <string name="volume_foot_us_liquid_gallon">7.48052</string>
-    <string name="volume_foot_us_dry_quart">25.71405</string>
-    <string name="volume_foot_us_liquid_quart">29.92208</string>
-    <string name="volume_foot_us_dry_pint">51.42809</string>
-    <string name="volume_foot_us_liquid_pint">59.84416</string>
-    <string name="volume_foot_yard">0.03704</string>
-
-    <string name="volume_inch_us_dry_gallon">0.00372</string>
-    <string name="volume_inch_us_liquid_gallon">0.00433</string>
-    <string name="volume_inch_us_dry_quart">0.01488</string>
-    <string name="volume_inch_us_liquid_quart">0.01732</string>
-    <string name="volume_inch_us_dry_pint">0.02976</string>
-    <string name="volume_inch_us_liquid_pint">0.03463</string>
-    <string name="volume_inch_yard">0.00002</string>
-
-    <string name="volume_us_dry_gallon_us_liquid_gallon">1.16365</string>
-    <string name="volume_us_dry_gallon_us_dry_quart">4</string>
-    <string name="volume_us_dry_gallon_us_liquid_quart">4.65459</string>
-    <string name="volume_us_dry_gallon_us_dry_pint">8</string>
-    <string name="volume_us_dry_gallon_us_liquid_pint">9.30918</string>
-    <string name="volume_us_dry_gallon_yard">0.00576</string>
-
-    <string name="volume_us_liquid_gallon_us_dry_quart">3.43747</string>
-    <string name="volume_us_liquid_gallon_us_liquid_quart">4</string>
-    <string name="volume_us_liquid_gallon_us_dry_pint">6.87494</string>
-    <string name="volume_us_liquid_gallon_us_liquid_pint">8</string>
-    <string name="volume_us_liquid_gallon_yard">0.00495</string>
-    
-    <string name="volume_us_dry_quart_us_liquid_quart">1.16365</string>
-    <string name="volume_us_dry_quart_us_dry_pint">2</string>
-    <string name="volume_us_dry_quart_us_liquid_pint">2.32729</string>
-    <string name="volume_us_dry_quart_yard">0.00144</string>
-
-    <string name="volume_us_liquid_quart_us_dry_pint">1.71873</string>
-    <string name="volume_us_liquid_quart_us_liquid_pint">2</string>
-    <string name="volume_us_liquid_quart_yard">0.00124</string>
-    
-    <string name="volume_us_dry_pint_us_liquid_pint">1.16365</string>
-    <string name="volume_us_dry_pint_yard">0.00072</string>
-    
-    <string name="volume_us_liquid_pint_yard">0.00062</string>
-    
-    
+        <item>*1000</item>
+        <item>*1000^2</item>
+        <item>*1000^3</item>
+        <item>*35.31467</item>
+        <item>*61023.74409</item>
+        <item>*1.30795</item>
+        <item>*227.02075</item>
+        <item>*264.17205</item>
+        <item>*908.08298</item>
+        <item>*1056.68821</item>
+        <item>*1816.16597</item>
+        <item>*2113.37642</item>
+    </string-array>
 
     <!-- Time-Zones -->
 

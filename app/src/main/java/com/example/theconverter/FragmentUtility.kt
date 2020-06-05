@@ -16,7 +16,7 @@ import androidx.navigation.NavDirections
  *
  * @author Eli
  */
-class FragmentUtility (private val fragment: ConstraintLayout) {
+class FragmentUtility (val fragment: ConstraintLayout) {
 
     // no public properties because getter doesn't take arguments
 

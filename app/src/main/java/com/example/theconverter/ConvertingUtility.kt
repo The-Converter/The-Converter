@@ -33,37 +33,45 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
         for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
 
             editText.setOnEditorActionListener { _, actionId, _ ->
-
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    editText.clearFocus()
-                    _fragmentUtility.hideKeyBoard()
-
-                    true
-                }
-                else {
-                    false
-                }
+                onEditorAction(editText, actionId)
             }
 
             editText.setOnFocusChangeListener { _, hasFocus ->
+                onFocusChangeListener(i, editText, hasFocus)
+            }
+        }
+    }
 
-                if (!hasFocus) {
+    private fun onEditorAction(editText: EditText, actionId: Int): Boolean {
 
-                    if (editText.text.isNotEmpty()) {
-                        setAllValues(getBaseValue(i, editText))
+        return if (actionId == EditorInfo.IME_ACTION_DONE) {
+            editText.clearFocus()
+            _fragmentUtility.hideKeyBoard()
 
-                        if (_historyActivated) {
-                            addToHistory(i, editText)
-                        }
-                    }
-                    else {
-                        clearAllEditText()
-                    }
-                }
-                else {
-                    editText.text.clear()
+            true
+        }
+        else {
+            false
+        }
+    }
+
+    private fun onFocusChangeListener(actListener: Int, editText: EditText, hasFocus: Boolean) {
+
+        if (!hasFocus) {
+
+            if (editText.text.isNotEmpty()) {
+                setAllValues(getBaseValue(actListener, editText))
+
+                if (_historyActivated) {
+                    addToHistory(actListener, editText)
                 }
             }
+            else {
+                clearAllEditText()
+            }
+        }
+        else {
+            editText.text.clear()
         }
     }
 
@@ -177,6 +185,10 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
         }
     }
 
+    /**
+     * Sets up a history for the given fragment
+     * Some text-views have to be set (if standard_layout is included, they're)
+     */
     fun setHistoryListener() {
         val historyTextViews = _fragmentUtility.getHistoryTextViews()
 

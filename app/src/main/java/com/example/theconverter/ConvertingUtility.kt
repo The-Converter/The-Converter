@@ -1,10 +1,7 @@
 package com.example.theconverter
 
-import android.content.Context
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import androidx.core.content.ContextCompat.getSystemService
 
 import org.mariuszgromada.math.mxparser.*
 
@@ -12,30 +9,34 @@ import org.mariuszgromada.math.mxparser.*
  * Utility class to convert and set units
  * If setListeners is called the class will use the factors to calculate and set the units
  *
- * @param [fragmentUtility] Utility class to manage a fragment
- * @param [context] Context
- * @param [factorArray] Array with factors for converting from the base value
- * @param [outputString] String to display unit-value with, $ will be replaced with value, if not provided only the value will be printed
- * @param [toBaseFactorArray] Array with factors for converting to the base value, if not provided the operations of the [factorArray] will be reversed
+ * @param [_fragmentUtility] Utility class to manage a fragment
+ * @param [_factorArray] Array with factors for converting from the base value
+ * @param [_outputString] String to display unit-value with, % will be replaced with value, if not provided only the value will be printed
+ * @param [_toBaseFactorArray] Array with factors for converting to the base value, if not provided the operations of the [_factorArray] will be reversed
  *
  * @author Eli
  */
-class ConvertingUtility (private val fragmentUtility: FragmentUtility, private val context: Context?, private val factorArray: Array<String>, private val outputString: String = "", private val toBaseFactorArray: Array<String> = arrayOf()) {
+class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private val _factorArray: Array<String>, private val _outputString: String = "", private val _toBaseFactorArray: Array<String> = arrayOf()) {
+
+    // index = number of textView
+    // 1st string = content of editText
+    // 2nd string = unit (EditText hint)
+    // 3rd string = actListener
+    private var _historyArray: Array<Array<String>> = Array(3) {Array(3) {""} }
+    private var _historyActivated: Boolean = false
 
     /**
      * Sets the listeners
      */
-    fun setListeners() {
+    fun setEditTextListener() {
 
-        for ((i, editText) in fragmentUtility.getEditTexts().withIndex()) {
+        for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
 
             editText.setOnEditorActionListener { _, actionId, _ ->
 
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     editText.clearFocus()
-
-                    val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    imm.hideSoftInputFromWindow(fragmentUtility.fragment.windowToken, 0)
+                    _fragmentUtility.hideKeyBoard()
 
                     true
                 }
@@ -47,7 +48,17 @@ class ConvertingUtility (private val fragmentUtility: FragmentUtility, private v
             editText.setOnFocusChangeListener { _, hasFocus ->
 
                 if (!hasFocus) {
-                    setAllValues(getBaseValue(editText, i))
+
+                    if (editText.text.isNotEmpty()) {
+                        setAllValues(getBaseValue(i, editText))
+
+                        if (_historyActivated) {
+                            addToHistory(i, editText)
+                        }
+                    }
+                    else {
+                        clearAllEditText()
+                    }
                 }
                 else {
                     editText.text.clear()
@@ -56,7 +67,7 @@ class ConvertingUtility (private val fragmentUtility: FragmentUtility, private v
         }
     }
 
-    private fun getBaseValue(editText: EditText, actListener: Int): Double {
+    private fun getBaseValue(actListener: Int, valueNumber: String): Double {
         val actFactorArray: Array<String>
         val actUnit: Int
 
@@ -64,14 +75,14 @@ class ConvertingUtility (private val fragmentUtility: FragmentUtility, private v
             actUnit = actListener - 1
         }
         else {
-            return editText.text.toString().toDouble()
+            return valueNumber.toDouble()
         }
 
-        if (toBaseFactorArray.isNotEmpty()) {
-            actFactorArray = toBaseFactorArray.copyOf()
+        if (_toBaseFactorArray.isNotEmpty()) {
+            actFactorArray = _toBaseFactorArray.copyOf()
         }
         else {
-            actFactorArray = factorArray.copyOf()
+            actFactorArray = _factorArray.copyOf()
 
             actFactorArray[actUnit] = when (actFactorArray[actUnit][0]) {
                 '+' -> actFactorArray[actUnit].replaceFirst('+', '-')
@@ -84,7 +95,11 @@ class ConvertingUtility (private val fragmentUtility: FragmentUtility, private v
             }
         }
 
-        return calculate(actFactorArray[actUnit], editText.text.toString())
+        return calculate(actFactorArray[actUnit], valueNumber)
+    }
+
+    private fun getBaseValue(actListener: Int, editText: EditText): Double {
+        return getBaseValue(actListener, editText.text.toString())
     }
 
     // i used a external library in this function, see its license here: https://github.com/mariuszgromada/MathParser.org-mXparser/blob/master/LICENSE.txt
@@ -95,20 +110,89 @@ class ConvertingUtility (private val fragmentUtility: FragmentUtility, private v
 
     private fun setAllValues(baseValue: Double) {
 
-        for ((i, editText) in fragmentUtility.getEditTexts().withIndex()) {
+        for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
 
             val result = if (i > 0) {
-                calculate(factorArray[i - 1], baseValue.toString()).toString()
+                calculate(_factorArray[i - 1], baseValue.toString()).toString()
             } else {
                 baseValue.toString()
             }
 
-            if (outputString == "") {
+            if (_outputString == "") {
                 editText.setText(result)
             }
             else {
-                editText.setText(outputString.replace("$", result))
+                editText.setText(_outputString.replace("%", result))
             }
         }
+    }
+
+    private fun clearAllEditText() {
+
+        for (editText in _fragmentUtility.getEditTexts()) {
+            editText.getText().clear()
+        }
+    }
+
+    private fun addToHistory(actUnit: Int, valueNumber: String, valueUnit: String) {
+        freeFirstSpaceInHistory()
+
+        _historyArray[0][0] = valueNumber
+        _historyArray[0][1] = valueUnit
+        _historyArray[0][2] = actUnit.toString()
+
+        setHistoryTextViews()
+    }
+
+    private fun addToHistory(actUnit: Int, editText: EditText) {
+        addToHistory(actUnit, editText.text.toString(), editText.hint.toString())
+    }
+
+    private fun freeFirstSpaceInHistory() {
+
+        if (_historyArray.isNullOrEmpty()) {
+            return
+        }
+
+        var actStringArray: Array<String>
+        var lastStringArray: Array<String> = _historyArray[0].copyOf()
+        _historyArray[0] = Array(3) {""}
+
+        for (i in _historyArray.indices) {
+
+            if (i < 2) {
+                actStringArray = _historyArray[i + 1]
+                _historyArray[i + 1] = lastStringArray
+
+                lastStringArray = actStringArray.copyOf()
+            }
+        }
+    }
+
+    private fun setHistoryTextViews() {
+        val historyTextViews = _fragmentUtility.getHistoryTextViews()
+
+        for ((i, textView) in historyTextViews.withIndex()) {
+            textView.setText("${_historyArray[i][0]} ${_historyArray[i][1]}")
+        }
+    }
+
+    fun setHistoryListener() {
+        val historyTextViews = _fragmentUtility.getHistoryTextViews()
+
+        for ((i, textView) in historyTextViews.withIndex()) {
+
+            textView.setOnClickListener {
+                val actListener = _historyArray[i][2].toInt()
+
+                setAllValues(getBaseValue(actListener, _historyArray[i][0]))
+
+                if (_historyActivated) {
+                    addToHistory(actListener, _historyArray[i][0], _historyArray[i][1])
+                }
+            }
+        }
+
+        _historyActivated = true
     }
 }

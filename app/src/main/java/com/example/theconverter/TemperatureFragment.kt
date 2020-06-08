@@ -36,7 +36,7 @@ class TemperatureFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        view.findViewById<EditText>(R.id.editText_celsius).setOnEditorActionListener { _, actionId, event ->
+        view.findViewById<EditText>(R.id.editText_celsius).setOnEditorActionListener { _, actionId, _ ->
 
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 view.findViewById<EditText>(R.id.editText_celsius).clearFocus()
@@ -53,7 +53,7 @@ class TemperatureFragment : Fragment() {
             }
         }
 
-        view.findViewById<EditText>(R.id.editText_fahrenheit).setOnEditorActionListener { _, actionId, event ->
+        view.findViewById<EditText>(R.id.editText_fahrenheit).setOnEditorActionListener { _, actionId, _ ->
 
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 view.findViewById<EditText>(R.id.editText_fahrenheit).clearFocus()
@@ -70,7 +70,7 @@ class TemperatureFragment : Fragment() {
             }
         }
 
-        view.findViewById<EditText>(R.id.editText_kelvin).setOnEditorActionListener { _, actionId, event ->
+        view.findViewById<EditText>(R.id.editText_kelvin).setOnEditorActionListener { _, actionId, _ ->
 
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 view.findViewById<EditText>(R.id.editText_kelvin).clearFocus()

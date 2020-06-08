@@ -41,7 +41,7 @@ class TimeZoneFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        _fragmentUtility = FragmentUtility(view.timeZoneFragment)
+        _fragmentUtility = FragmentUtility(view.timeZoneFragment, context)
 
         // cache list with tags
         _fragmentUtility.getEditTexts(true, "timeField")

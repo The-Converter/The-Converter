@@ -1,6 +1,5 @@
 package com.example.theconverter
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,10 +27,11 @@ class VolumeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragmentUtility = FragmentUtility(view.volumeFragment)
+        val fragmentUtility = FragmentUtility(view.volumeFragment, context)
         fragmentUtility.setReturnButton(view, findNavController(), VolumeFragmentDirections.actionVolumeFragmentToFirstFragment())
 
-        val convertingUtility = ConvertingUtility(fragmentUtility, context, resources.getStringArray(R.array.volume_factors))
-        convertingUtility.setListeners()
+        val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.volume_factors))
+        convertingUtility.setEditTextListener()
+        convertingUtility.setHistoryListener()
     }
 }

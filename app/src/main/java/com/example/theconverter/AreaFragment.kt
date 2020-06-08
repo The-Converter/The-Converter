@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_area.view.*
 
@@ -26,10 +27,11 @@ class AreaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragmentUtility: FragmentUtility = FragmentUtility(view.areaFragment)
+        val fragmentUtility = FragmentUtility(view.areaFragment, context)
         fragmentUtility.setReturnButton(view, findNavController(), AreaFragmentDirections.actionAreaFragmentToFirstFragment())
 
-        val convertingUtility: ConvertingUtility = ConvertingUtility(fragmentUtility, context, resources.getStringArray(R.array.area_factors))
-        convertingUtility.setListeners()
+        val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.area_factors))
+        convertingUtility.setEditTextListener()
+        convertingUtility.setHistoryListener()
     }
 }

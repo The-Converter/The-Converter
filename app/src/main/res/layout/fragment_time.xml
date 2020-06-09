@@ -8,25 +8,13 @@
     android:background="@color/screenBackground"
     tools:context=".TimeFragment">
 
-    <ImageButton
-        android:id="@+id/imageButton_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/ic_button_choose_description"
-        android:src="@drawable/ic_button_choose"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textview_d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:text="@string/day_time_textView_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,5 +137,7 @@
         android:hint="@string/millisecond_time_editText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_ms" />
+
+    <include layout="@layout/standard_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

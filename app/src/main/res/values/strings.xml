@@ -144,8 +144,8 @@
 
     <string name="day_time_editText">d</string>
     <string name="hour_time_editText">h</string>
-    <string name="minute_time_editText">m</string>
-    <string name="second_time_editText">s</string>
+    <string name="minute_time_editText">min</string>
+    <string name="second_time_editText">sec</string>
     <string name="millisecond_time_editText">ms</string>
 
     <string name="utc_min12_time_zones_editText_text">UTC-12</string>

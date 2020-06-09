@@ -36,6 +36,7 @@
     </string-array>
 
     <!-- distance -->
+
     <string-array
         name="distance_factors" >
 
@@ -79,39 +80,17 @@
 
     <!-- energy -->
 
-    <string name="energy_kilo">1000</string>
+    <string-array
+        name="energy_factors" >
 
-    <string name="energy_joule_calorie">0.239006</string>
-    <string name="energy_joule_kilocalorie">0.000239006</string>
-    <string name="energy_joule_watt_hour">0.000277778</string>
-    <string name="energy_joule_kilowatt_hour">0.000000277778</string>
-    <string name="energy_joule_british_thermal_unit">0.000947817</string>
-    <string name="energy_joule_foot_pound">0.737562</string>
-
-    <string name="energy_kilojoule_calorie">239.006</string>
-    <string name="energy_kilojoule_kilocalorie">0.239006</string>
-    <string name="energy_kilojoule_watt_hour">0.277778</string>
-    <string name="energy_kilojoule_kilowatt_hour">0.000277778</string>
-    <string name="energy_kilojoule_british_thermal_unit">0.947817</string>
-    <string name="energy_kilojoule_foot_pound">737.562</string>
-    
-    <string name="energy_calorie_watt_hour">0.00116222</string>
-    <string name="energy_calorie_kilowatt_hour">0.00000116222</string>
-    <string name="energy_calorie_british_thermal_unit">0.00396567</string>
-    <string name="energy_calorie_foot_pound">3.08596</string>
-
-    <string name="energy_kilocalorie_watt_hour">1.16222</string>
-    <string name="energy_kilocalorie_kilowatt_hour">0.00116222</string>
-    <string name="energy_kilocalorie_british_thermal_unit">3.96567</string>
-    <string name="energy_kilocalorie_foot_pound">3085.96</string>
-
-    <string name="energy_watt_hour_british_thermal_unit">3.41214</string>
-    <string name="energy_watt_hour_foot_pound">2655.22</string>
-
-    <string name="energy_kilowatt_hour_british_thermal_unit">3412.14</string>
-    <string name="energy_kilowatt_hour_foot_pound">2655220</string>
-
-    <string name="energy_british_thermal_unit_foot_pound">778.169</string>
+        <item>/1000</item>
+        <item>*0.239006</item>
+        <item>*0.000239006</item>
+        <item>*0.000277778</item>
+        <item>*0.000000277778</item>
+        <item>*0.000947817</item>
+        <item>*0.737562</item>
+    </string-array>
 
     <!-- volume -->
 

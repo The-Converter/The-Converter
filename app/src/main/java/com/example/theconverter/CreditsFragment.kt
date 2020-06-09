@@ -26,6 +26,6 @@ class CreditsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        FragmentUtility(view.creditFragment, context).setReturnButton(view, findNavController(), CreditsFragmentDirections.actionCreditsToFirstFragment())
+        FragmentUtility(view.creditFragment, context).setReturnButton(findNavController(), CreditsFragmentDirections.actionCreditsToFirstFragment())
     }
 }

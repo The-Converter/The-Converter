@@ -28,7 +28,7 @@ class VolumeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.volumeFragment, context)
-        fragmentUtility.setReturnButton(view, findNavController(), VolumeFragmentDirections.actionVolumeFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(findNavController(), VolumeFragmentDirections.actionVolumeFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.volume_factors))
         convertingUtility.setEditTextListener()

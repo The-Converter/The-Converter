@@ -91,9 +91,9 @@ class FragmentUtility (private val _fragment: ConstraintLayout, private val _con
      * @param [action] where to navigate to
      * @param [id] id of the image button, standard is imageButton_choose
      */
-    fun setReturnButton(view: View, navController: NavController, action: NavDirections, id: Int = R.id.imageButton_choose) {
+    fun setReturnButton(navController: NavController, action: NavDirections, id: Int = R.id.imageButton_choose) {
 
-        view.findViewById<ImageButton>(id).setOnClickListener {
+        _fragment.findViewById<ImageButton>(id).setOnClickListener {
             navController.navigate(action)
         }
     }

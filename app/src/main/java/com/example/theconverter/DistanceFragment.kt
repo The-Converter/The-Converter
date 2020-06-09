@@ -27,7 +27,7 @@ class DistanceFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.distanceFragment, context)
-        fragmentUtility.setReturnButton(view, findNavController(), DistanceFragmentDirections.actionDistanceFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(findNavController(), DistanceFragmentDirections.actionDistanceFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.distance_factors))
         convertingUtility.setEditTextListener()

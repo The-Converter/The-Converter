@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- speed -->
-    <string name="ms_kmh">3.6</string>
-    <string name="kmh_mph">0.6213711922373</string>
-    <string name="kmh_fts">0.9113444152814</string>
-    <string name="kmh_kn">0.5399568034557</string>
 
-    <string name="ms_mph">2.236936292054</string>
-    <string name="ms_fts">3.280839895013</string>
-    <string name="ms_kn">1.943844492441 </string>
+    <string-array
+        name="speed_factors" >
 
-    <string name="mph_fts">1.466666666667</string>
-    <string name="mph_kn">0.8689762419006</string>
-
-    <string name="fts_kn">0.5924838012959</string>
+        <item>x/3.6</item>
+        <item>x*0.6213711922373</item>
+        <item>x*0.9113444152814</item>
+        <item>x*0.5399568034557</item>
+    </string-array>
 
     <!-- temperature -->
-    <string name="celsius_fahrenheit_factor">1.8</string>
-    <string name="celsius_fahrenheit_add">32</string>
-    <string name="celsius_kelvin_add">273.15</string>
 
-    <string name="fahrenheit_kelvin_subtract">459.67</string>
+    <string-array
+        name="temperature_factors" >
+
+        <item>x*1.8+32</item>
+        <item>x+273.15</item>
+    </string-array>
+
+    <string-array
+        name="temperature_factors_to_base" >
+
+        <item>(x-32)/1.8</item>
+        <item>x-273.15</item>
+    </string-array>
 
     <!-- area -->
     <string-array
         name="area_factors" >
 
-        <item>*100^1</item>
-        <item>*100^2</item>
-        <item>*100^3</item>
-        <item>*100^4</item>
-        <item>*100^5</item>
-        <item>*100^6</item>
-        <item>*0.3861021585424</item>
+        <item>x*100^1</item>
+        <item>x*100^2</item>
+        <item>x*100^3</item>
+        <item>x*100^4</item>
+        <item>x*100^5</item>
+        <item>x*100^6</item>
+        <item>x*0.3861021585424</item>
     </string-array>
 
     <!-- distance -->
@@ -40,15 +45,15 @@
     <string-array
         name="distance_factors" >
 
-        <item>*10^3</item>
-        <item>*10^4</item>
-        <item>*10^5</item>
-        <item>*10^6</item>
-        <item>*0.621371</item>
-        <item>*1093.61</item>
-        <item>*3280.84</item>
-        <item>*0.539957</item>
-        <item>*39370.1</item>
+        <item>x*10^3</item>
+        <item>x*10^4</item>
+        <item>x*10^5</item>
+        <item>x*10^6</item>
+        <item>x*0.621371</item>
+        <item>x*1093.61</item>
+        <item>x*3280.84</item>
+        <item>x*0.539957</item>
+        <item>x*39370.1</item>
     </string-array>
 
     <!-- time -->
@@ -56,10 +61,10 @@
     <string-array
         name="time_factors" >
 
-        <item>*24</item>
-        <item>*1440</item>
-        <item>*86400</item>
-        <item>*86400000</item>
+        <item>x*24</item>
+        <item>x*1440</item>
+        <item>x*86400</item>
+        <item>x*86400000</item>
     </string-array>
 
     <!-- energy -->
@@ -67,13 +72,13 @@
     <string-array
         name="energy_factors" >
 
-        <item>/1000</item>
-        <item>*0.239006</item>
-        <item>*0.000239006</item>
-        <item>*0.000277778</item>
-        <item>*0.000000277778</item>
-        <item>*0.000947817</item>
-        <item>*0.737562</item>
+        <item>x/1000</item>
+        <item>x*0.239006</item>
+        <item>x*0.000239006</item>
+        <item>x*0.000277778</item>
+        <item>x*0.000000277778</item>
+        <item>x*0.000947817</item>
+        <item>x*0.737562</item>
     </string-array>
 
     <!-- volume -->
@@ -81,18 +86,18 @@
     <string-array
         name="volume_factors" >
 
-        <item>*1000</item>
-        <item>*1000^2</item>
-        <item>*1000^3</item>
-        <item>*35.31467</item>
-        <item>*61023.74409</item>
-        <item>*1.30795</item>
-        <item>*227.02075</item>
-        <item>*264.17205</item>
-        <item>*908.08298</item>
-        <item>*1056.68821</item>
-        <item>*1816.16597</item>
-        <item>*2113.37642</item>
+        <item>x*1000</item>
+        <item>x*1000^2</item>
+        <item>x*1000^3</item>
+        <item>x*35.31467</item>
+        <item>x*61023.74409</item>
+        <item>x*1.30795</item>
+        <item>x*227.02075</item>
+        <item>x*264.17205</item>
+        <item>x*908.08298</item>
+        <item>x*1056.68821</item>
+        <item>x*1816.16597</item>
+        <item>x*2113.37642</item>
     </string-array>
 
     <!-- Time-Zones -->

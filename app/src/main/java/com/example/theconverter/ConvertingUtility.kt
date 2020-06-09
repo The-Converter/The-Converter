@@ -16,7 +16,7 @@ import org.mariuszgromada.math.mxparser.*
  *
  * @author Eli
  */
-class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private val _factorArray: Array<String>, private val _outputString: String = "", private val _toBaseFactorArray: Array<String> = arrayOf()) {
+class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private val _factorArray: Array<String>, private val _toBaseFactorArray: Array<String> = arrayOf(), private val _outputString: String = "") {
 
     // index = number of textView
     // 1st string = content of editText
@@ -112,7 +112,7 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
 
     // i used a external library in this function, see its license here: https://github.com/mariuszgromada/MathParser.org-mXparser/blob/master/LICENSE.txt
     private fun calculate(expressionString: String, enteredNumber: String): Double {
-        val expression: Expression = Expression(enteredNumber + expressionString)
+        val expression = Expression(expressionString.replace("x", enteredNumber))
         return expression.calculate()
     }
 

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:text="@string/kmh_textView_text"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,16 +139,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_kn" />
 
-    <ImageButton
-        android:id="@+id/imageButton_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_button_choose"
-        android:contentDescription="@string/ic_button_choose_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/standard_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

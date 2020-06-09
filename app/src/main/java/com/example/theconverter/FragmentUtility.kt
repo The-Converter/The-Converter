@@ -14,9 +14,8 @@ import androidx.navigation.NavDirections
  * Utility class for Fragments
  * Get and filter children on conditions, soon more
  *
- * @param [fragment] ConstraintLayout (frogment with constraints) to work with
- * @param [context] Context
- * @throws [ClassNotFoundException] if no Scroll-View exists in the given ConstraintLayout but is required by a called method
+ * @param [_fragment] ConstraintLayout (frogment with constraints) to work with
+ * @param [_context] Context
  *
  * @author Eli
  */

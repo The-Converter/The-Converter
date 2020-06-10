@@ -98,23 +98,26 @@ class TimeZoneFragment : Fragment() {
         var hourTimeUTC = baseTime[1] + timeToAdd[1]
         var minTimeUTC = baseTime[2] + timeToAdd[2]
 
-        if (minTimeUTC >= 60) {
-            hourTimeUTC += 1
-            minTimeUTC -= 60
-        } else if (minTimeUTC < 0) {
-            hourTimeUTC -= 1
-            minTimeUTC += 60
-        }
+        var pair = unitCheck(minTimeUTC, hourTimeUTC, 60)
+        minTimeUTC = pair.first
+        hourTimeUTC = pair.second
 
-        if (hourTimeUTC >= 24) {
-            dayTimeUTC += 1
-            hourTimeUTC -= 24
-        } else if (hourTimeUTC < 0) {
-            dayTimeUTC -= 1
-            hourTimeUTC += 24
-        }
+        pair = unitCheck(hourTimeUTC, dayTimeUTC, 24)
+        hourTimeUTC = pair.first
+        dayTimeUTC = pair.second
 
         return intArrayOf(dayTimeUTC, hourTimeUTC, minTimeUTC)
+    }
+
+    private fun unitCheck(smallerUnit: Int, biggerUnit: Int, difference: Int): Pair<Int, Int> {
+
+        return if (smallerUnit >= difference) {
+            Pair(smallerUnit - difference, biggerUnit + 1)
+        } else if (smallerUnit < 0) {
+            Pair(smallerUnit + difference, biggerUnit - 1)
+        } else {
+            Pair(smallerUnit, biggerUnit)
+        }
     }
 
     private fun setAllTime(timeUTC: IntArray) {
@@ -127,11 +130,7 @@ class TimeZoneFragment : Fragment() {
     private fun setOneTime(editText: EditText, time: IntArray) {
         if (time[0] == 0) {
             editText.setText(
-                getString(
-                    R.string.clock_24_hours_without_days_format,
-                    time[1].toString().padStart(2, '0'),
-                    time[2].toString().padStart(2, '0')
-                )
+                getString(R.string.clock_24_hours_without_days_format, time[1].toString().padStart(2, '0'), time[2].toString().padStart(2, '0'))
             )
         }
         else {

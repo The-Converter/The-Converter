@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.fragment_time_zone.view.*
 class TimeZoneFragment : Fragment() {
 
     private var _selectedFun: Int = -1
+    private var _factorArray: Array<String> = emptyArray()
     private lateinit var _fragmentUtility: FragmentUtility
 
     override fun onCreateView(
@@ -45,6 +46,7 @@ class TimeZoneFragment : Fragment() {
 
         // cache list with tags
         _fragmentUtility.getEditTexts(true, "timeField")
+        _factorArray = resources.getStringArray(R.array.time_zones_factors)
 
         setOnClickListener(view)
     }
@@ -56,6 +58,7 @@ class TimeZoneFragment : Fragment() {
 
         if (!timePicker.isVisible) {
             timePicker.visibility = TimePicker.VISIBLE
+            timePicker.setIs24HourView(true)
             timePicker.bringToFront()
 
             button.visibility = Button.VISIBLE
@@ -115,18 +118,38 @@ class TimeZoneFragment : Fragment() {
     }
 
     private fun setAllTime(timeUTC: IntArray) {
-        val factorArray = resources.getStringArray(R.array.time_zones_factors)
 
         for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
-            setOneTime(editText, fromUTC(timeUTC, factorArray[i]))
+            setOneTime(editText, fromUTC(timeUTC, _factorArray[i]))
         }
     }
 
     private fun setOneTime(editText: EditText, time: IntArray) {
-        if (time[0] == 0)
-            editText.setText(getString(R.string.clock_24_hours_without_days_format, time[1].toString().padStart(2, '0'), time[2].toString().padStart(2, '0')))
-        else
-            editText.setText(getString(R.string.clock_24_hours_with_days_format, time[0].toString(), time[1].toString().padStart(2, '0'), time[2].toString().padStart(2, '0')))
+        if (time[0] == 0) {
+            editText.setText(
+                getString(
+                    R.string.clock_24_hours_without_days_format,
+                    time[1].toString().padStart(2, '0'),
+                    time[2].toString().padStart(2, '0')
+                )
+            )
+        }
+        else {
+            editText.setText(
+                getString(
+                    R.string.clock_24_hours_with_days_format,
+
+                    if (time[0] == 1) {
+                        "next day"
+                    }
+                    else {
+                        "day before"
+                    },
+                    time[1].toString().padStart(2, '0'),
+                    time[2].toString().padStart(2, '0')
+                )
+            )
+        }
     }
 
     private fun fromUTC(timeUTC: IntArray, timeZoneVal: String): IntArray {
@@ -154,8 +177,8 @@ class TimeZoneFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setOnClickListener(view: View) {
         for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
-            editText.setOnFocusChangeListener{ _, hasfocus ->
-                if (hasfocus) {
+            editText.setOnFocusChangeListener{ _, hasFocus ->
+                if (hasFocus) {
                     toggleTimeSelVisibility(view)
                     _selectedFun = i
                 }
@@ -164,86 +187,8 @@ class TimeZoneFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button_done).setOnClickListener {
             val timePicker = view.findViewById<TimePicker>(R.id.timePicker)
-            timePicker.setIs24HourView(true)
 
-            when (_selectedFun) {
-                0 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min12)))
-
-                1 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min11)))
-
-                2 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min10)))
-
-                3 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min9_30)))
-
-                4 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min9)))
-
-                5 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min8)))
-
-                6 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min7)))
-
-                7 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min6)))
-
-                8 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min5)))
-
-                9 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min4)))
-
-                10 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min3)))
-
-                11 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min2_30)))
-
-                12 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min2)))
-
-                13 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_min1)))
-
-                14 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl0)))
-
-                15 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl1)))
-
-                16 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl2)))
-
-                17 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl3)))
-
-                18 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl4)))
-
-                19 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl4_30)))
-
-                20 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5)))
-
-                21 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5_30)))
-
-                22 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl5_45)))
-
-                23 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl6)))
-
-                24 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl6_30)))
-
-                25 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl7)))
-
-                26 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl8)))
-
-                27 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl8_45)))
-
-                28 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl9)))
-
-                29 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl9_30)))
-
-                30 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl10)))
-
-                31 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl10_30)))
-
-                32 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl11)))
-
-                33 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl12)))
-
-                34 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl12_45)))
-
-                35 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl13)))
-
-                36 -> setAllTime(toUTC(timePicker.hour, timePicker.minute, getString(R.string.time_zones_utc_pl14)))
-
-                else -> throw NotImplementedError()
-            }
-
+            setAllTime(toUTC(timePicker.hour, timePicker.minute, _factorArray[_selectedFun]))
             toggleTimeSelVisibility(view)
         }
     }

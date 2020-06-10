@@ -5,10 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.widget.EditText
-import android.widget.ImageButton
-import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_temperature.view.*
 
 

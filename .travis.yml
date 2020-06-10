@@ -15,6 +15,7 @@ android:
     - tools
     - build-tools-29.0.3
     - android-29
+    - sys-img-x86-android-29
 
 before_install:
   - chmod +x gradlew

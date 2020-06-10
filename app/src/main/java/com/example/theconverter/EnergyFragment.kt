@@ -28,7 +28,7 @@ class EnergyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.energyFragment, context)
-        fragmentUtility.setReturnButton(findNavController(), EnergyFragmentDirections.actionEnergyFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(EnergyFragmentDirections.actionEnergyFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.energy_factors))
         convertingUtility.setEditTextListener()

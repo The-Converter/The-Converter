@@ -28,7 +28,7 @@ class TimeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.timeFragment, context)
-        fragmentUtility.setReturnButton(findNavController(), TimeFragmentDirections.actionTimeFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(TimeFragmentDirections.actionTimeFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.time_factors))
         convertingUtility.setEditTextListener()

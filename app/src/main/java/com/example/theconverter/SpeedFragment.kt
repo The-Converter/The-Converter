@@ -29,7 +29,7 @@ class SpeedFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.speedFragment, context)
-        fragmentUtility.setReturnButton(findNavController(), SpeedFragmentDirections.actionSpeedFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(SpeedFragmentDirections.actionSpeedFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.speed_factors))
         convertingUtility.setEditTextListener()

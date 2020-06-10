@@ -27,7 +27,7 @@ class AreaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.areaFragment, context)
-        fragmentUtility.setReturnButton(findNavController(), AreaFragmentDirections.actionAreaFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(AreaFragmentDirections.actionAreaFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.area_factors))
         convertingUtility.setEditTextListener()

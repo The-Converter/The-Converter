@@ -19,8 +19,6 @@ import kotlinx.android.synthetic.main.fragment_temperature.view.*
  */
 class TemperatureFragment : Fragment() {
 
-    private var changedByApp: Boolean = false
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,7 +31,7 @@ class TemperatureFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentUtility = FragmentUtility(view.temperatureFragment, context)
-        fragmentUtility.setReturnButton(findNavController(), TemperatureFragmentDirections.actionTemperatureFragmentToFirstFragment())
+        fragmentUtility.setReturnButton(TemperatureFragmentDirections.actionTemperatureFragmentToFirstFragment())
 
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.temperature_factors), resources.getStringArray(R.array.temperature_factors_to_base))
         convertingUtility.setEditTextListener()

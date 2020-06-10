@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_first.view.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -24,50 +25,16 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_speed).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToSpeedFragment()
-            findNavController().navigate(action)
-        }
+        val fragmentUtility = FragmentUtility(view.firstFragment, context)
 
-        view.findViewById<Button>(R.id.button_temperature).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToTemperatureFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_area).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToAreaFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_distance).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToDistanceFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_time).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToTimeFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_time_zones).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToTimeZoneFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_energy).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToEnergyFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_volume).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToVolumeFragment()
-            findNavController().navigate(action)
-        }
-
-        view.findViewById<Button>(R.id.button_credits).setOnClickListener {
-            val action = FirstFragmentDirections.actionFirstFragmentToCreditFragment()
-            findNavController().navigate(action)
-        }
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToSpeedFragment(), R.id.button_speed)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToTemperatureFragment(), R.id.button_temperature)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToAreaFragment(), R.id.button_area)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToDistanceFragment(), R.id.button_distance)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToTimeFragment(), R.id.button_time)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToEnergyFragment(), R.id.button_energy)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToTimeZoneFragment(), R.id.button_time_zones)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToVolumeFragment(), R.id.button_volume)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToCreditFragment(), R.id.button_credits)
     }
-
 }

@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.contentValuesOf
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
+import androidx.navigation.findNavController
 
 /**
  * Utility class for Fragments
@@ -85,15 +86,13 @@ class FragmentUtility (private val _fragment: ConstraintLayout, private val _con
     /**
      * Sets up a onclick listener to perform a navigation
      *
-     * @param [view] View, needed to get ImageButton
-     * @param [navController] NavController, needed for navigation
      * @param [action] where to navigate to
      * @param [id] id of the image button, standard is imageButton_choose
      */
-    fun setReturnButton(navController: NavController, action: NavDirections, id: Int = R.id.imageButton_choose) {
+    fun setReturnButton(action: NavDirections, id: Int = R.id.imageButton_choose) {
 
-        _fragment.findViewById<ImageButton>(id).setOnClickListener {
-            navController.navigate(action)
+        _fragment.findViewById<View>(id).setOnClickListener {
+            _fragment.findNavController().navigate(action)
         }
     }
 

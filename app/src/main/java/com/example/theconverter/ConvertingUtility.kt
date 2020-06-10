@@ -92,14 +92,14 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
         else {
             actFactorArray = _factorArray.copyOf()
 
-            actFactorArray[actUnit] = when (actFactorArray[actUnit][0]) {
+            actFactorArray[actUnit] = when (actFactorArray[actUnit][1]) {
                 '+' -> actFactorArray[actUnit].replaceFirst('+', '-')
                 '-' -> actFactorArray[actUnit].replaceFirst('-', '+')
 
                 '*' -> actFactorArray[actUnit].replaceFirst('*', '/')
                 '/' -> actFactorArray[actUnit].replaceFirst('/', '*')
 
-                else -> throw IllegalArgumentException("The factor (${actFactorArray[actUnit]}) doesn't contain a legal operator at the first position")
+                else -> throw IllegalArgumentException("The factor (${actFactorArray[actUnit]}) doesn't contain a legal operator at the second position")
             }
         }
 

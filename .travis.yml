@@ -16,6 +16,9 @@ android:
     - build-tools-29.0.3
     - android-29
 
+before_install:
+  - chmod +x gradlew
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 

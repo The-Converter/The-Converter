@@ -3,6 +3,7 @@ env:
     - CC_TEST_REPORTER_ID=2e68fe183d7869528ce403ed6117cc4d0a06a3177f2ed1e55a2f230d4a00ae3c
 
 language: android
+dist: trusty
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter

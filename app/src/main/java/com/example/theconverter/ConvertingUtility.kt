@@ -86,9 +86,15 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
     private fun setOnLongClickListener(editText: EditText) {
 
         editText.setOnLongClickListener {
-            _fragmentUtility.copyTextToClipboard(editText)
-            _recentlyCopied = true
-            true
+
+            if (!editText.hasFocus()) {
+                _fragmentUtility.copyTextToClipboard(editText)
+                _recentlyCopied = true
+                true
+            }
+            else {
+                false
+            }
         }
     }
 

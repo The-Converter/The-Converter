@@ -25,6 +25,8 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
     private var _historyArray: Array<Array<String>> = Array(3) {Array(3) {""} }
     private var _historyActivated: Boolean = false
 
+    private var _recentlyCopied: Boolean = false
+
     /**
      * Sets the listeners
      */
@@ -32,46 +34,61 @@ class ConvertingUtility (private val _fragmentUtility: FragmentUtility, private 
 
         for ((i, editText) in _fragmentUtility.getEditTexts().withIndex()) {
 
-            editText.setOnEditorActionListener { _, actionId, _ ->
-                onEditorAction(editText, actionId)
-            }
-
-            editText.setOnFocusChangeListener { _, hasFocus ->
-                onFocusChangeListener(i, editText, hasFocus)
-            }
+            setOnEditorAction(editText)
+            setOnFocusChangeListener(editText, i)
+            setOnLongClickListener(editText)
         }
     }
 
-    private fun onEditorAction(editText: EditText, actionId: Int): Boolean {
+    private fun setOnEditorAction(editText: EditText) {
 
-        return if (actionId == EditorInfo.IME_ACTION_DONE) {
-            editText.clearFocus()
-            _fragmentUtility.hideKeyBoard()
+        editText.setOnEditorActionListener { _, actionId, _ ->
 
-            true
-        }
-        else {
-            false
-        }
-    }
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                editText.clearFocus()
+                _fragmentUtility.hideKeyBoard()
 
-    private fun onFocusChangeListener(actListener: Int, editText: EditText, hasFocus: Boolean) {
-
-        if (!hasFocus) {
-
-            if (editText.text.isNotEmpty()) {
-                setAllValues(getBaseValue(actListener, editText))
-
-                if (_historyActivated) {
-                    addToHistory(actListener, editText)
-                }
+                true
             }
             else {
-                clearAllEditText()
+                false
             }
         }
-        else {
-            editText.text.clear()
+    }
+
+    private fun setOnFocusChangeListener(editText: EditText, actListener: Int) {
+
+        editText.setOnFocusChangeListener { _, hasFocus ->
+
+            if (!hasFocus) {
+
+                if (editText.text.isNotEmpty()) {
+                    setAllValues(getBaseValue(actListener, editText))
+
+                    if (_historyActivated) {
+                        addToHistory(actListener, editText)
+                    }
+                }
+                else {
+                    clearAllEditText()
+                }
+            }
+            else if (_recentlyCopied) {
+                editText.clearFocus()
+                _recentlyCopied = false
+            }
+            else {
+                editText.text.clear()
+            }
+        }
+    }
+
+    private fun setOnLongClickListener(editText: EditText) {
+
+        editText.setOnLongClickListener {
+            _fragmentUtility.copyTextToClipboard(editText)
+            _recentlyCopied = true
+            true
         }
     }
 

@@ -1,5 +1,7 @@
 package com.example.theconverter
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -121,5 +123,26 @@ class FragmentUtility (private val _fragment: ConstraintLayout, private val _con
         }
 
         return _cacheHistoryTextViewList
+    }
+
+    /**
+     * Copies given text to clipboard and shows a toast for confirmation
+     */
+    fun copyTextToClipboard(label: String, text: String) {
+
+        _context?.let {context ->
+            val clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            clipboardManager.setPrimaryClip(ClipData.newPlainText(label, text))
+
+            Toast.makeText(context, "Copied!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Overload of [copyTextToClipboard], gets label and text from editText
+     * @see [copyTextToClipboard]
+     */
+    fun copyTextToClipboard(editText: EditText) {
+        copyTextToClipboard("Converted value in ${editText.hint}", "${editText.text} ${editText.hint}")
     }
 }

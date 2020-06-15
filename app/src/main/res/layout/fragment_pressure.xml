@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pressureFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PressureFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_choose">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+            android:id="@+id/textView_bar_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/bar_pressure_textView_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton_choose" />
+
+            <EditText
+                android:id="@+id/editText_bar_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/bar_pressure_editText"
+                android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_bar_pressure" />
+
+            <TextView
+                android:id="@+id/textView_pascal_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pascal_pressure_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_bar_pressure" />
+
+            <EditText
+                android:id="@+id/editText_pascal_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/pascal_pressure_editText"
+                android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_pascal_pressure" />
+
+            <TextView
+                android:id="@+id/textView_torr_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/torr_pressure_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_pascal_pressure" />
+
+            <EditText
+                android:id="@+id/editText_torr_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/torr_pressure_editText"
+                android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_torr_pressure" />
+
+            <TextView
+                android:id="@+id/textView_pound_per_square_inch_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pound_per_square_inch_pressure_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_torr_pressure" />
+
+            <EditText
+                android:id="@+id/editText_pound_per_square_inch_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/pound_per_square_inch_pressure_editText"
+                android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_pound_per_square_inch_pressure" />
+
+            <TextView
+                android:id="@+id/textView_technical_atmosphere_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/technical_atmosphere_pressure_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_pound_per_square_inch_pressure" />
+
+            <EditText
+                android:id="@+id/editText_technical_atmosphere_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/technical_atmosphere_pressure_editText"
+                android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_technical_atmosphere_pressure" />
+
+            <TextView
+                android:id="@+id/textView_standard_atmosphere_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/standard_atmosphere_pressure_textView_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_technical_atmosphere_pressure" />
+
+            <EditText
+                android:id="@+id/editText_standard_atmosphere_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:autofillHints="none"
+                android:ems="10"
+                android:hint="@string/standard_atmosphere_pressure_editText"
+                android:inputType="numberSigned|numberDecimal"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_standard_atmosphere_pressure" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/standard_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

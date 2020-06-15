@@ -81,6 +81,7 @@
         <item>x*0.737562</item>
     </string-array>
 
+
     <!-- volume -->
 
     <string-array
@@ -98,6 +99,18 @@
         <item>x*1056.68821</item>
         <item>x*1816.16597</item>
         <item>x*2113.37642</item>
+    </string-array>
+
+    <!-- pressure -->
+
+    <string-array
+        name="pressure_factors">
+
+        <item>x*100000</item>
+        <item>x*750,062</item>
+        <item>x*14,5038</item>
+        <item>x*1.0197</item>
+        <item>x*0.98692</item>
     </string-array>
 
     <!-- Time-Zones -->

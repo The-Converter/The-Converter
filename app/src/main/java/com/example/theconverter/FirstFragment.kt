@@ -33,6 +33,7 @@ class FirstFragment : Fragment() {
         fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToEnergyFragment(), R.id.button_energy)
         fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToTimeZoneFragment(), R.id.button_time_zones)
         fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToVolumeFragment(), R.id.button_volume)
+        fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToPressureFragment(), R.id.button_pressure)
         fragmentUtility.setReturnButton(FirstFragmentDirections.actionFirstFragmentToCreditFragment(), R.id.button_credits)
     }
 }

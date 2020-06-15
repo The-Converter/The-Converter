@@ -46,6 +46,10 @@
             android:id="@+id/action_FirstFragment_to_creditFragment"
             app:destination="@id/creditFragment"
             app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_FirstFragment_to_pressureFragment"
+            app:destination="@id/pressureFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment
@@ -145,5 +149,15 @@
             android:id="@+id/action_credits_to_FirstFragment"
             app:destination="@id/FirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/pressureFragment"
+        android:name="com.example.theconverter.PressureFragment"
+        android:label="fragment_pressure"
+        tools:layout="@layout/fragment_pressure" >
+        <action
+            android:id="@+id/action_pressureFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"/>
     </fragment>
 </navigation>

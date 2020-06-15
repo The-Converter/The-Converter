@@ -112,6 +112,13 @@
     <string name="utc_pl12_45_time_zones_textView_text">UTC+12:45</string>
     <string name="utc_pl13_time_zones_textView_text">UTC+13</string>
     <string name="utc_pl14_time_zones_textView_text">UTC+14</string>
+    
+    <string name="bar_pressure_textView_text">Bar</string>
+    <string name="pascal_pressure_textView_text">Pascal</string>
+    <string name="torr_pressure_textView_text">Torr</string>
+    <string name="pound_per_square_inch_pressure_textView_text">Pound per square inch</string>
+    <string name="technical_atmosphere_pressure_textView_text">Technical atmosphere</string>
+    <string name="standard_atmosphere_pressure_textView_text">Standard atmosphere</string>
 
     <!-- Text for credits -->
     <string name="credits_heading_textView_text">Credits</string>
@@ -209,6 +216,13 @@
     <string name="us_dry_pint_volume_editText">pt</string>
     <string name="us_liquid_pint_volume_editText">pt</string>
 
+    <string name="bar_pressure_editText">bar</string>
+    <string name="pascal_pressure_editText">Pa</string>
+    <string name="torr_pressure_editText">Torr</string>
+    <string name="pound_per_square_inch_pressure_editText">lbf/in2</string>
+    <string name="technical_atmosphere_pressure_editText">at</string>
+    <string name="standard_atmosphere_pressure_editText">atm</string>
+
 
     <!--  Strings used for Buttons -->
     <string name="temperature_button_text">Temperature</string>
@@ -219,6 +233,7 @@
     <string name="time_zones_button_text">Time-Zones</string>
     <string name="energy_button_text">Energy</string>
     <string name="volume_button_text">Volume</string>
+    <string name="pressure_button_text">Pressure</string>
 
     <string name="credits_button_text">Credits</string>
 

@@ -5,12 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageButton
-import androidx.core.widget.doAfterTextChanged
-import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_pressure.view.*
-
 
 /**
  * A simple [Fragment] subclass.
@@ -36,7 +31,5 @@ class PressureFragment : Fragment() {
         val convertingUtility = ConvertingUtility(fragmentUtility, resources.getStringArray(R.array.pressure_factors))
         convertingUtility.setEditTextListener()
         convertingUtility.setHistoryListener()
-
-
     }
 }

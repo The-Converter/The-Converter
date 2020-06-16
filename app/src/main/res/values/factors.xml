@@ -107,8 +107,8 @@
         name="pressure_factors">
 
         <item>x*100000</item>
-        <item>x*750,062</item>
-        <item>x*14,5038</item>
+        <item>x*750.062</item>
+        <item>x*14.5038</item>
         <item>x*1.0197</item>
         <item>x*0.98692</item>
     </string-array>

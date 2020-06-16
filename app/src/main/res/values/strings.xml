@@ -62,9 +62,9 @@
     <string name="foot_pound_energy_textView_text">Foot-pound</string>
 
     <string name="cubic_meter_volume_textView_text">Cubic meter</string>
-    <string name="liter_volume_textView_text">Liter / Cubic decimeter</string>
+    <string name="liter_volume_textView_text">Liter/Cubic decimeter</string>
     <string name="cubic_centimeter_volume_textView_text">Cubic centimeter</string>
-    <string name="milliliter_volume_textView_text">Milliliter / Cubic millimeter</string>
+    <string name="milliliter_volume_textView_text">Milliliter/Cubic millimeter</string>
     <string name="cubic_foot_volume_textView_text">Cubic foot</string>
     <string name="cubic_inch_volume_textView_text">Cubic inch</string>
     <string name="cubic_yard_textView_text">Cubic Yard</string>
@@ -203,9 +203,9 @@
     <string name="foot_pound_energy_editText"> ft⋅lb</string>
 
     <string name="cubic_meter_volume_editText">m³</string>
-    <string name="liter_volume_editText">l / dm³</string>
+    <string name="liter_volume_editText">l/dm³</string>
     <string name="cubic_centimeter_volume_editText">cm³</string>
-    <string name="milliliter_volume_editText">ml / mm³</string>
+    <string name="milliliter_volume_editText">ml/mm³</string>
     <string name="cubic_foot_volume_editText">ctf</string>
     <string name="cubic_inch_volume_editText">cuin</string>
     <string name="cubic_yard_editText">yd³</string>
